@@ -1,0 +1,17 @@
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/fdj/Git/unity3d-ecs-example/obj/Debug/Assembly-CSharp.dll
+/Users/fdj/Git/unity3d-ecs-example/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.DataContract.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.Mdb.dll
