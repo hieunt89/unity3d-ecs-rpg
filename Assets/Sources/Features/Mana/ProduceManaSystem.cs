@@ -22,6 +22,7 @@ public class ProduceManaSystem : ISetPool, IInitializeSystem, IReactiveSystem {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
+		// tick change 1 second per frame .... sai roi
 		Debug.Log ("tick changed");
 		_pool.ReplaceMana (_pool.mana.amount + 1);
 	}

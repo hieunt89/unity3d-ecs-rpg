@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Entitas;
 
-public class GUIPauseButton : MonoBehaviour, IPauseListener {
+public class GUIPauseButton : MonoBehaviour {
 	Button mButton;
+
+	void Awake () {
+//		Pools.sharedInstance.pool.CreateEntity ().
+	}
 
 	void Start () {
 		mButton = GetComponent <Button> ();
@@ -13,13 +18,5 @@ public class GUIPauseButton : MonoBehaviour, IPauseListener {
 			});
 		}
 	}
-	public void TickChanged (long currentTick)
-	{
-		throw new System.NotImplementedException ();
-	}
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

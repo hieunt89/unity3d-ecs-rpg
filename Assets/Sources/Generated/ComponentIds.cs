@@ -12,16 +12,18 @@ public static class ComponentIds {
     public const int Mana = 1;
     public const int Name = 2;
     public const int Pause = 3;
-    public const int Speed = 4;
-    public const int Tick = 5;
+    public const int PauseListener = 4;
+    public const int Speed = 5;
+    public const int Tick = 6;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "Input",
         "Mana",
         "Name",
         "Pause",
+        "PauseListener",
         "Speed",
         "Tick"
     };
@@ -31,6 +33,7 @@ public static class ComponentIds {
         typeof(ManaComponent),
         typeof(NameComponent),
         typeof(PauseComponent),
+        typeof(PauseListenerComponent),
         typeof(SpeedComponent),
         typeof(TickComponent)
     };

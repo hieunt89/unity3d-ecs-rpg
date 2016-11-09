@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
 		return new Feature ("Systems")
 			// Time 
 			.Add (pools.pool.CreateSystem (new IncrementTickSystem ()))
+			.Add (pools.pool.CreateSystem (new NotifyPauseListenerSystem ()))
 
 			// Input
 			.Add (pools.pool.CreateSystem (new InputSystem()))

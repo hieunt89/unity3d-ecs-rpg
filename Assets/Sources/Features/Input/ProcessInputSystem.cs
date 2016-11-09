@@ -12,8 +12,9 @@ public class ProcessInputSystem : ISetPool, IReactiveSystem {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
-		Debug.Log ("Process Input");
-		var e = entities.SingleEntity();
+		var inputEntity = entities.SingleEntity();
+		var input = inputEntity.input;
+		Debug.Log ("Process Input " + input.x + "/" + input.y + "/" + input.z);
 	}
 
 	public TriggerOnEvent trigger {

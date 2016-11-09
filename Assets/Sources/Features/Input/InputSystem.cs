@@ -1,7 +1,6 @@
 ﻿using Entitas;
 using UnityEngine;
 
-
 // xu ly input system
 // touch input
 // mouse click input
@@ -30,6 +29,7 @@ public class InputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 		}
 	}
 
+	// sao khong thay no execute ?
 	public void Cleanup ()
 	{
 		Debug.Log ("clean up");

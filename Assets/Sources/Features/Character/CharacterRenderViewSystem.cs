@@ -12,7 +12,8 @@ public class CharacterRenderViewSystem : ISetPool, IReactiveSystem {
 
 	public void Execute (List<Entity> entities)
 	{
-		Debug.Log ("render system");
+//		Debug.Log ("render system");
+		// load model from resource
 		foreach (var e in entities) {
 			new GameObject(e.name.text);
 		}
