@@ -6,6 +6,10 @@
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.UI.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ProBuilderCore-Unity5.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ProBuilderMeshOps-Unity5.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/KDTree.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Triangle.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.SerializationLogic.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.DataContract.dll

@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using Entitas;
 
-public class GUISpellButton : MonoBehaviour, IPauseListener {
+public class GUISpellButton : MonoBehaviour {
 
 	void Awake () {
 //		Pools.sharedInstance.pool.CreateEntity ()
@@ -10,8 +10,4 @@ public class GUISpellButton : MonoBehaviour, IPauseListener {
 //		;
 	}
 
-	public void PauseStateChanged (bool isPaused)
-	{
-		GetComponent <Button> ().enabled = !isPaused;
-	}
 }

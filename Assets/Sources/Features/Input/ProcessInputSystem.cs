@@ -1,25 +1,22 @@
-﻿using Entitas;
-using UnityEngine;
-
-public class ProcessInputSystem : ISetPool, IReactiveSystem {
-
-	Pool _pool;
-
-	public void SetPool (Pool pool)
-	{
-		_pool = pool;
-	}
-
-	public void Execute (System.Collections.Generic.List<Entity> entities)
-	{
-		var inputEntity = entities.SingleEntity();
-		var input = inputEntity.input;
-		Debug.Log ("Process Input " + input.x + "/" + input.y + "/" + input.z);
-	}
-
-	public TriggerOnEvent trigger {
-		get {
-			return Matcher.Input.OnEntityAdded ();
-		}
-	}
-}
+//using System.Collections.Generic;
+//using Entitas;
+//using System.Linq;
+//
+//public sealed class ProcessInputSystem : ISetPools, IReactiveSystem {
+//
+//    public TriggerOnEvent trigger { get { return InputMatcher.Input.OnEntityAdded(); } }
+//
+//	Pools _pools;
+//
+//    public void SetPools(Pools pools) {
+//        _pools = pools;
+//    }
+//
+//    public void Execute(List<Entity> entities) {
+//        var inputEntity = entities.SingleEntity();
+//        var input = inputEntity.input;
+////        foreach(var e in _pools.core.GetEntitiesWithPosition(input.x, input.y).Where(e => e.isInteractive)) {
+////            e.isDestroy = true;
+////        }
+//    }
+//}

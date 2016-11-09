@@ -2,6 +2,7 @@
 
 public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 	Pool _pool;
+
 	public void SetPool (Pool pool)
 	{
 		_pool = pool;
@@ -9,6 +10,10 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 
 	public void Initialize ()
 	{
-		_pool.CreateEntity ().AddName ("fdj");
+		_pool.CreateEntity ()
+			.IsCharacter(true)
+			.AddName ("fdj")
+			.AddPosition (1, 0 ,1);
+		;
 	}
 }

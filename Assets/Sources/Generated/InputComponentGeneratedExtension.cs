@@ -6,44 +6,47 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Entitas;
+
 namespace Entitas {
 
     public partial class Entity {
 
-        public InputComponent input { get { return (InputComponent)GetComponent(ComponentIds.Input); } }
-        public bool hasInput { get { return HasComponent(ComponentIds.Input); } }
+        public InputComponent input { get { return (InputComponent)GetComponent(InputComponentIds.Input); } }
+        public bool hasInput { get { return HasComponent(InputComponentIds.Input); } }
 
-        public Entity AddInput(float newX, float newY, float newZ) {
-            var component = CreateComponent<InputComponent>(ComponentIds.Input);
+        public Entity AddInput(int newX, int newY, int newZ) {
+            var component = CreateComponent<InputComponent>(InputComponentIds.Input);
             component.x = newX;
             component.y = newY;
             component.z = newZ;
-            return AddComponent(ComponentIds.Input, component);
+            return AddComponent(InputComponentIds.Input, component);
         }
 
-        public Entity ReplaceInput(float newX, float newY, float newZ) {
-            var component = CreateComponent<InputComponent>(ComponentIds.Input);
+        public Entity ReplaceInput(int newX, int newY, int newZ) {
+            var component = CreateComponent<InputComponent>(InputComponentIds.Input);
             component.x = newX;
             component.y = newY;
             component.z = newZ;
-            ReplaceComponent(ComponentIds.Input, component);
+            ReplaceComponent(InputComponentIds.Input, component);
             return this;
         }
 
         public Entity RemoveInput() {
-            return RemoveComponent(ComponentIds.Input);
+            return RemoveComponent(InputComponentIds.Input);
         }
     }
+}
 
-    public partial class Matcher {
+    public partial class InputMatcher {
 
         static IMatcher _matcherInput;
 
         public static IMatcher Input {
             get {
                 if(_matcherInput == null) {
-                    var matcher = (Matcher)Matcher.AllOf(ComponentIds.Input);
-                    matcher.componentNames = ComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(InputComponentIds.Input);
+                    matcher.componentNames = InputComponentIds.componentNames;
                     _matcherInput = matcher;
                 }
 
@@ -51,4 +54,3 @@ namespace Entitas {
             }
         }
     }
-}

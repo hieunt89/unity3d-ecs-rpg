@@ -386,7 +386,7 @@ public class RPGCharacterControllerFREE : MonoBehaviour
 		{
 			CameraRelativeMovement();
 			Vector3 motion = inputVec;
-			motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1)?.7f:1;
+			motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1) ? 0.7f : 1;
 			rb.AddForce(motion * inAirSpeed, ForceMode.Acceleration);
 			//limit the amount of velocity we can achieve
 			float velocityX = 0;

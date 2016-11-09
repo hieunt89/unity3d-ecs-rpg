@@ -15,26 +15,23 @@ public class GameController : MonoBehaviour {
 
 	void Update () {
 		_systems.Execute ();
+		_systems.Cleanup ();
 	}
 
+	void OnDestroy () {
+		_systems.TearDown ();
+	}
 	Systems CreateSystems (Pools pools) {
 		return new Feature ("Systems")
-			// Time 
-			.Add (pools.pool.CreateSystem (new IncrementTickSystem ()))
-			.Add (pools.pool.CreateSystem (new NotifyPauseListenerSystem ()))
 
 			// Input
-			.Add (pools.pool.CreateSystem (new InputSystem()))
-			.Add (pools.pool.CreateSystem (new ProcessInputSystem()))
+			.Add (pools.input.CreateSystem (new InputSystem()))
+//				.Add (pools.input.CreateSystem (new ProcessInputSystem()))
 
-
-			// Character			
-			.Add (pools.pool.CreateSystem(new CharacterInitializeSystem ()))
-			.Add (pools.pool.CreateSystem(new CharacterRenderViewSystem ()))
-
-
-			// Mana
-			.Add (pools.pool.CreateSystem (new ProduceManaSystem ()))
+			// Character
+			.Add (pools.core.CreateSystem (new CharacterInitializeSystem()))
+			.Add (pools.core.CreateSystem (new CharacterRenderViewSystem()))
 			;
+
 	}
 }

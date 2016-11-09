@@ -6,40 +6,43 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Entitas;
+
 namespace Entitas {
 
     public partial class Entity {
 
-        public NameComponent name { get { return (NameComponent)GetComponent(ComponentIds.Name); } }
-        public bool hasName { get { return HasComponent(ComponentIds.Name); } }
+        public NameComponent name { get { return (NameComponent)GetComponent(CoreComponentIds.Name); } }
+        public bool hasName { get { return HasComponent(CoreComponentIds.Name); } }
 
-        public Entity AddName(string newText) {
-            var component = CreateComponent<NameComponent>(ComponentIds.Name);
-            component.text = newText;
-            return AddComponent(ComponentIds.Name, component);
+        public Entity AddName(string newValue) {
+            var component = CreateComponent<NameComponent>(CoreComponentIds.Name);
+            component.value = newValue;
+            return AddComponent(CoreComponentIds.Name, component);
         }
 
-        public Entity ReplaceName(string newText) {
-            var component = CreateComponent<NameComponent>(ComponentIds.Name);
-            component.text = newText;
-            ReplaceComponent(ComponentIds.Name, component);
+        public Entity ReplaceName(string newValue) {
+            var component = CreateComponent<NameComponent>(CoreComponentIds.Name);
+            component.value = newValue;
+            ReplaceComponent(CoreComponentIds.Name, component);
             return this;
         }
 
         public Entity RemoveName() {
-            return RemoveComponent(ComponentIds.Name);
+            return RemoveComponent(CoreComponentIds.Name);
         }
     }
+}
 
-    public partial class Matcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherName;
 
         public static IMatcher Name {
             get {
                 if(_matcherName == null) {
-                    var matcher = (Matcher)Matcher.AllOf(ComponentIds.Name);
-                    matcher.componentNames = ComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.Name);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherName = matcher;
                 }
 
@@ -47,4 +50,3 @@ namespace Entitas {
             }
         }
     }
-}

@@ -12,6 +12,11 @@
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEngine.Networking.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.Networking.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.TreeEditor.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ProBuilderCore-Unity5.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ProBuilderMeshOps-Unity5.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/KDTree.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Triangle.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/ProBuilderEditor-Unity5.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.Graphs.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.Android.Extensions.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/UnityEditor.iOS.Extensions.dll
