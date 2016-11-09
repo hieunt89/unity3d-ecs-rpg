@@ -1,4 +1,5 @@
 ﻿using Entitas;
+using Entitas.CodeGenerator;
 
 [Input]
 public sealed class InputComponent : IComponent {
