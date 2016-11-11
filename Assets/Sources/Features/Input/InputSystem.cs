@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public sealed class InputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
+public sealed class MoveInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 
     Pool _pool;
     Group _inputs;
@@ -12,7 +12,7 @@ public sealed class InputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
     }
 
     public void Execute() {
-        var input = Input.GetMouseButtonDown(0);
+        var input = Input.GetMouseButtonDown(1);
 
         if(input) {
 			RaycastHit hit;
@@ -21,7 +21,7 @@ public sealed class InputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 				var pos = hit.point;
 
                 _pool.CreateEntity()
-					.AddInput((int)pos.x, (int)pos.y, (int)pos.z);
+					.AddInput(pos.x, pos.y, pos.z);
             }
         }
     }

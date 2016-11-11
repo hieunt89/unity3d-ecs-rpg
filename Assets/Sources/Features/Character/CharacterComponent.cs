@@ -1,6 +1,6 @@
 ﻿using Entitas;
 using Entitas.CodeGenerator;
 
-[Core]
+[Core, SingleEntity]
 public class CharacterComponent : IComponent {
 }

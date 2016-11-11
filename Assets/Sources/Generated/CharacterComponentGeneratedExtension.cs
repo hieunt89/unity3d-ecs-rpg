@@ -32,6 +32,25 @@ namespace Entitas {
             return this;
         }
     }
+
+    public partial class Pool {
+
+        public Entity characterEntity { get { return GetGroup(CoreMatcher.Character).GetSingleEntity(); } }
+
+        public bool isCharacter {
+            get { return characterEntity != null; }
+            set {
+                var entity = characterEntity;
+                if(value != (entity != null)) {
+                    if(value) {
+                        CreateEntity().isCharacter = true;
+                    } else {
+                        DestroyEntity(entity);
+                    }
+                }
+            }
+        }
+    }
 }
 
     public partial class CoreMatcher {

@@ -25,12 +25,14 @@ public class GameController : MonoBehaviour {
 		return new Feature ("Systems")
 
 			// Input
-			.Add (pools.input.CreateSystem (new InputSystem()))
-//				.Add (pools.input.CreateSystem (new ProcessInputSystem()))
+			.Add (pools.input.CreateSystem (new MoveInputSystem()))
+			.Add (pools.input.CreateSystem (new ProcessMoveInputSystem()))
 
 			// Character
 			.Add (pools.core.CreateSystem (new CharacterInitializeSystem()))
 			.Add (pools.core.CreateSystem (new CharacterRenderViewSystem()))
+			.Add (pools.core.CreateSystem (new CharacterUpdateViewSystem()))
+
 			;
 
 	}

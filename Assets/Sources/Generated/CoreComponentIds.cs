@@ -9,14 +9,16 @@
 public static class CoreComponentIds {
 
     public const int Character = 0;
-    public const int Name = 1;
-    public const int Position = 2;
-    public const int View = 3;
+    public const int Destination = 1;
+    public const int Name = 2;
+    public const int Position = 3;
+    public const int View = 4;
 
-    public const int TotalComponents = 4;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "Character",
+        "Destination",
         "Name",
         "Position",
         "View"
@@ -24,6 +26,7 @@ public static class CoreComponentIds {
 
     public static readonly System.Type[] componentTypes = {
         typeof(CharacterComponent),
+        typeof(DestinationComponent),
         typeof(NameComponent),
         typeof(PositionComponent),
         typeof(ViewComponent)

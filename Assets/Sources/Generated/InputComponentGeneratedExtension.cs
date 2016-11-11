@@ -15,7 +15,7 @@ namespace Entitas {
         public InputComponent input { get { return (InputComponent)GetComponent(InputComponentIds.Input); } }
         public bool hasInput { get { return HasComponent(InputComponentIds.Input); } }
 
-        public Entity AddInput(int newX, int newY, int newZ) {
+        public Entity AddInput(float newX, float newY, float newZ) {
             var component = CreateComponent<InputComponent>(InputComponentIds.Input);
             component.x = newX;
             component.y = newY;
@@ -23,7 +23,7 @@ namespace Entitas {
             return AddComponent(InputComponentIds.Input, component);
         }
 
-        public Entity ReplaceInput(int newX, int newY, int newZ) {
+        public Entity ReplaceInput(float newX, float newY, float newZ) {
             var component = CreateComponent<InputComponent>(InputComponentIds.Input);
             component.x = newX;
             component.y = newY;
