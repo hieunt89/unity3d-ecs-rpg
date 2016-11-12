@@ -31,8 +31,17 @@ public class GameController : MonoBehaviour {
 			// Character
 			.Add (pools.core.CreateSystem (new CharacterInitializeSystem()))
 			.Add (pools.core.CreateSystem (new CharacterRenderViewSystem()))
-			.Add (pools.core.CreateSystem (new CharacterUpdateViewSystem()))
-			.Add (pools.core.CreateSystem (new CharacterUpdateHitPointSystem()))
+			
+			// Navigation
+			.Add (pools.core.CreateSystem (new NavigationSystem()))
+			
+			// Hit Point
+			.Add (pools.core.CreateSystem (new HitPointSystem()))
+
+			// Level + EXP
+			.Add (pools.core.CreateSystem (new LevelSystem()))
+			.Add (pools.core.CreateSystem (new LevelUpSystem()))	
+			.Add (pools.core.CreateSystem (new UpdateExpSystem()))		
 			;
 
 	}

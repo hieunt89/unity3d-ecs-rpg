@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class CharacterUpdateViewSystem : ISetPool, IReactiveSystem {
+public class NavigationSystem : ISetPool, IReactiveSystem {
 	Pool _pool;
 
 	public void SetPool (Pool pool)

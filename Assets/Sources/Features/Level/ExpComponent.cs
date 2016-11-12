@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
 [Core]
-public class LevelComponent : IComponent {
+public class ExpComponent : IComponent {
 	public int value;
 }

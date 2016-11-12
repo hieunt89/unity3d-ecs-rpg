@@ -16,7 +16,8 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddPosition (1, 0 ,1)
 			.AddBaseHitPoint (100)
 			.AddBaseManaPoint (100)
-			.AddLevel (1)
+			.AddCurrentLevel (1)
+			.AddCurrentExp (50)			
 			;
 		;
 	}

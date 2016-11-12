@@ -11,23 +11,31 @@ public static class CoreComponentIds {
     public const int BaseHitPoint = 0;
     public const int BaseManaPoint = 1;
     public const int Character = 2;
-    public const int Destination = 3;
-    public const int HitPoint = 4;
-    public const int Level = 5;
-    public const int ManaPoint = 6;
-    public const int Name = 7;
-    public const int Position = 8;
-    public const int View = 9;
+    public const int CurrentExp = 3;
+    public const int CurrentHitPoint = 4;
+    public const int CurrentLevel = 5;
+    public const int Destination = 6;
+    public const int Exp = 7;
+    public const int HitPoint = 8;
+    public const int LevelUp = 9;
+    public const int ManaPoint = 10;
+    public const int Name = 11;
+    public const int Position = 12;
+    public const int View = 13;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
         "BaseHitPoint",
         "BaseManaPoint",
         "Character",
+        "CurrentExp",
+        "CurrentHitPoint",
+        "CurrentLevel",
         "Destination",
+        "Exp",
         "HitPoint",
-        "Level",
+        "LevelUp",
         "ManaPoint",
         "Name",
         "Position",
@@ -38,9 +46,13 @@ public static class CoreComponentIds {
         typeof(BaseHitPointComponent),
         typeof(BaseManaPointComponent),
         typeof(CharacterComponent),
+        typeof(CurrentExpComponent),
+        typeof(CurrentHitPointComponent),
+        typeof(CurrentLevelComponent),
         typeof(DestinationComponent),
+        typeof(ExpComponent),
         typeof(HitPointComponent),
-        typeof(LevelComponent),
+        typeof(LevelUpComponent),
         typeof(ManaPointComponent),
         typeof(NameComponent),
         typeof(PositionComponent),
