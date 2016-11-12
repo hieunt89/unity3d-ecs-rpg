@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new CharacterInitializeSystem()))
 			.Add (pools.core.CreateSystem (new CharacterRenderViewSystem()))
 			.Add (pools.core.CreateSystem (new CharacterUpdateViewSystem()))
-
+			.Add (pools.core.CreateSystem (new CharacterUpdateHitPointSystem()))
 			;
 
 	}

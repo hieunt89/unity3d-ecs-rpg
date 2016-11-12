@@ -8,25 +8,40 @@
 //------------------------------------------------------------------------------
 public static class CoreComponentIds {
 
-    public const int Character = 0;
-    public const int Destination = 1;
-    public const int Name = 2;
-    public const int Position = 3;
-    public const int View = 4;
+    public const int BaseHitPoint = 0;
+    public const int BaseManaPoint = 1;
+    public const int Character = 2;
+    public const int Destination = 3;
+    public const int HitPoint = 4;
+    public const int Level = 5;
+    public const int ManaPoint = 6;
+    public const int Name = 7;
+    public const int Position = 8;
+    public const int View = 9;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
+        "BaseHitPoint",
+        "BaseManaPoint",
         "Character",
         "Destination",
+        "HitPoint",
+        "Level",
+        "ManaPoint",
         "Name",
         "Position",
         "View"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(BaseHitPointComponent),
+        typeof(BaseManaPointComponent),
         typeof(CharacterComponent),
         typeof(DestinationComponent),
+        typeof(HitPointComponent),
+        typeof(LevelComponent),
+        typeof(ManaPointComponent),
         typeof(NameComponent),
         typeof(PositionComponent),
         typeof(ViewComponent)

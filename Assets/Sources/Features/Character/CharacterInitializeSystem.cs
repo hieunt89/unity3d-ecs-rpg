@@ -13,7 +13,11 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 		_pool.CreateEntity ()
 			.IsCharacter(true)
 			.AddName ("fdj")
-			.AddPosition (1, 0 ,1);
+			.AddPosition (1, 0 ,1)
+			.AddBaseHitPoint (100)
+			.AddBaseManaPoint (100)
+			.AddLevel (1)
+			;
 		;
 	}
 }
