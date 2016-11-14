@@ -1,5 +1,4 @@
 ﻿using Entitas;
-using UnityEngine;
 
 public class TickUpdateSystem : ISetPool, IInitializeSystem, IExecuteSystem
 {	
@@ -12,17 +11,12 @@ public class TickUpdateSystem : ISetPool, IInitializeSystem, IExecuteSystem
 
     public void Initialize()
     {
-        _pool.SetTick(0f)
-        .AddTickSpeed (1f)
-        ;
+        _pool.ReplaceTick (0);
     }
 
     public void Execute()
     {
-        if (!_pool.isPause) {
-        }
+        if (!_pool.isPause)
+            _pool.ReplaceTick(_pool.tick.currentTick + 1);
     }
-
-
-   
 }

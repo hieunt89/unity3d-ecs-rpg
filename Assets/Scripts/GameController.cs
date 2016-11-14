@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour {
 
 	Systems _systems;
 
-	void Start () {
+	void Awake () {
 		var pools = Pools.sharedInstance;
 		pools.SetAllPools();
 
@@ -25,9 +25,11 @@ public class GameController : MonoBehaviour {
 		return new Feature ("Systems")
 
 			// Time
-			// .Add (pools.core.CreateSystem (new TickUpdateSystem()))
-			.Add (pools.core.CreateSystem (new TimeSystem()))
-			.Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
+			.Add (pools.core.CreateSystem (new TickUpdateSystem()))
+			.Add (pools.core.CreateSystem (new NotifyTickListenersSystem()))
+
+			// .Add (pools.core.CreateSystem (new TimeSystem()))
+			// .Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
 			
 			
 			// Input

@@ -15,13 +15,13 @@ namespace Entitas {
         public TickComponent tick { get { return (TickComponent)GetComponent(CoreComponentIds.Tick); } }
         public bool hasTick { get { return HasComponent(CoreComponentIds.Tick); } }
 
-        public Entity AddTick(float newCurrentTick) {
+        public Entity AddTick(long newCurrentTick) {
             var component = CreateComponent<TickComponent>(CoreComponentIds.Tick);
             component.currentTick = newCurrentTick;
             return AddComponent(CoreComponentIds.Tick, component);
         }
 
-        public Entity ReplaceTick(float newCurrentTick) {
+        public Entity ReplaceTick(long newCurrentTick) {
             var component = CreateComponent<TickComponent>(CoreComponentIds.Tick);
             component.currentTick = newCurrentTick;
             ReplaceComponent(CoreComponentIds.Tick, component);
@@ -39,7 +39,7 @@ namespace Entitas {
         public TickComponent tick { get { return tickEntity.tick; } }
         public bool hasTick { get { return tickEntity != null; } }
 
-        public Entity SetTick(float newCurrentTick) {
+        public Entity SetTick(long newCurrentTick) {
             if(hasTick) {
                 throw new EntitasException("Could not set tick!\n" + this + " already has an entity with TickComponent!",
                     "You should check if the pool already has a tickEntity before setting it or use pool.ReplaceTick().");
@@ -49,7 +49,7 @@ namespace Entitas {
             return entity;
         }
 
-        public Entity ReplaceTick(float newCurrentTick) {
+        public Entity ReplaceTick(long newCurrentTick) {
             var entity = tickEntity;
             if(entity == null) {
                 entity = SetTick(newCurrentTick);

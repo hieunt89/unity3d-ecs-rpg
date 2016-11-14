@@ -18,21 +18,22 @@ public static class CoreComponentIds {
     public const int Exp = 7;
     public const int HitPoint = 8;
     public const int HitPointRegenerationRate = 9;
-    public const int LevelUp = 10;
-    public const int ManaPoint = 11;
-    public const int Movable = 12;
-    public const int MoveSpeed = 13;
-    public const int Name = 14;
-    public const int Pause = 15;
-    public const int Position = 16;
-    public const int Second = 17;
-    public const int Tick = 18;
-    public const int TickSpeed = 19;
-    public const int TimeScale = 20;
-    public const int TurnSpeed = 21;
-    public const int View = 22;
+    public const int JumpInTime = 10;
+    public const int LevelUp = 11;
+    public const int ManaPoint = 12;
+    public const int Movable = 13;
+    public const int MoveSpeed = 14;
+    public const int Name = 15;
+    public const int Pause = 16;
+    public const int Position = 17;
+    public const int Second = 18;
+    public const int Tick = 19;
+    public const int TickSpeed = 20;
+    public const int TimeScale = 21;
+    public const int TurnSpeed = 22;
+    public const int View = 23;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
         "BaseHitPoint",
@@ -45,6 +46,7 @@ public static class CoreComponentIds {
         "Exp",
         "HitPoint",
         "HitPointRegenerationRate",
+        "JumpInTime",
         "LevelUp",
         "ManaPoint",
         "Movable",
@@ -71,6 +73,7 @@ public static class CoreComponentIds {
         typeof(ExpComponent),
         typeof(HitPointComponent),
         typeof(HitPointRegenerationRateComponent),
+        typeof(JumpInTimeComponent),
         typeof(LevelUpComponent),
         typeof(ManaPointComponent),
         typeof(MovableComponent),
