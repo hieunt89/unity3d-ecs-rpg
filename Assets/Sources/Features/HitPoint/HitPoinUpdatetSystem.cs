@@ -1,8 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
-using System;
 
-public class HitPointSystem : IReactiveSystem {
+public class HitPointUpdateSystem : IReactiveSystem {
 	
 	public TriggerOnEvent trigger {
 		get {
@@ -15,11 +14,9 @@ public class HitPointSystem : IReactiveSystem {
 		var characterEntity = entities.SingleEntity ();
 		//
 		int hitPoint = characterEntity.baseHitPoint.amount;
-		if (characterEntity.currentLevel.value > 1){
-			for (int levelIndex = 1; levelIndex < characterEntity.currentLevel.value; levelIndex++)
-			{
-				hitPoint = Mathf.FloorToInt (hitPoint * 1.1f);
-			}
+		for (int levelIndex = 1; characterEntity.currentLevel.value > 1 && levelIndex < characterEntity.currentLevel.value; levelIndex++)
+		{
+			hitPoint = Mathf.FloorToInt (hitPoint * 1.1f);
 		}
 		characterEntity.ReplaceHitPoint (hitPoint);
 

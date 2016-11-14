@@ -17,13 +17,22 @@ public static class CoreComponentIds {
     public const int Destination = 6;
     public const int Exp = 7;
     public const int HitPoint = 8;
-    public const int LevelUp = 9;
-    public const int ManaPoint = 10;
-    public const int Name = 11;
-    public const int Position = 12;
-    public const int View = 13;
+    public const int HitPointRegenerationRate = 9;
+    public const int LevelUp = 10;
+    public const int ManaPoint = 11;
+    public const int Movable = 12;
+    public const int MoveSpeed = 13;
+    public const int Name = 14;
+    public const int Pause = 15;
+    public const int Position = 16;
+    public const int Second = 17;
+    public const int Tick = 18;
+    public const int TickSpeed = 19;
+    public const int TimeScale = 20;
+    public const int TurnSpeed = 21;
+    public const int View = 22;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "BaseHitPoint",
@@ -35,10 +44,19 @@ public static class CoreComponentIds {
         "Destination",
         "Exp",
         "HitPoint",
+        "HitPointRegenerationRate",
         "LevelUp",
         "ManaPoint",
+        "Movable",
+        "MoveSpeed",
         "Name",
+        "Pause",
         "Position",
+        "Second",
+        "Tick",
+        "TickSpeed",
+        "TimeScale",
+        "TurnSpeed",
         "View"
     };
 
@@ -52,10 +70,19 @@ public static class CoreComponentIds {
         typeof(DestinationComponent),
         typeof(ExpComponent),
         typeof(HitPointComponent),
+        typeof(HitPointRegenerationRateComponent),
         typeof(LevelUpComponent),
         typeof(ManaPointComponent),
+        typeof(MovableComponent),
+        typeof(MoveSpeedComponent),
         typeof(NameComponent),
+        typeof(PauseComponent),
         typeof(PositionComponent),
+        typeof(SecondComponent),
+        typeof(TickComponent),
+        typeof(TickSpeedComponent),
+        typeof(TimeScaleComponent),
+        typeof(TurnSpeedComponent),
         typeof(ViewComponent)
     };
 }

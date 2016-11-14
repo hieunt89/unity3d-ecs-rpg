@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-public class UpdateExpSystem : ISetPool, IExecuteSystem
+public class ExpUpdateSystem : ISetPool, IExecuteSystem
 {
 	  Pool _pool;
     public void SetPool(Pool pool)

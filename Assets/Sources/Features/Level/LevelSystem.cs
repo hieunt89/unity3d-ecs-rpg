@@ -22,7 +22,6 @@ public class LevelSystem : IReactiveSystem {
 		}
 
 		characterEntity.ReplaceExp (exp);
-		Debug.Log (exp);
 	}
 
 }

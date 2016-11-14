@@ -19,27 +19,24 @@ public class CharacterRenderViewSystem : ISetPool, IReactiveSystem {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
-		foreach (var e in entities) {
-			var prefab = Resources.Load<GameObject> (e.name.value);
-			GameObject go = null;
-			try {
-				go = GameObject.Instantiate (prefab);
-			} catch (Exception) {
-				Debug.Log ("Cannot instantiate " + prefab);
+		var characterEntity = _pool.characterEntity;
+		var prefab = Resources.Load<GameObject> (characterEntity.name.value);
+		GameObject view = null;
+		try {
+			view = GameObject.Instantiate (prefab);
+		} catch (Exception) {
+			Debug.Log ("Cannot instantiate " + prefab);
+		}
+
+		if (view != null) {
+			view.transform.SetParent (_viewContainer, false);
+			characterEntity.AddView (view);
+			view.Link(characterEntity, _pool);
+
+			if (characterEntity.hasPosition) {
+				var position = characterEntity.position;
+				view.transform.position = new Vector3(position.x, position.y, position.z);
 			}
-
-			if (go != null) {
-				go.transform.SetParent (_viewContainer, false);
-				e.AddView (go);
-				go.Link(e, _pool);
-
-				if (e.hasPosition) {
-					var position = e.position;
-					go.transform.position = new Vector3(position.x, position.y, position.z);
-				}
-			}
-
 		}
 	}
-
 }
