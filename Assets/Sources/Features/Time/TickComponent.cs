@@ -3,5 +3,5 @@ using Entitas.CodeGenerator;
 
 [Core, SingleEntity]
 public class TickComponent : IComponent {
-	public long currentTick;
+	public float currentTick;
 }

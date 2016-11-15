@@ -8,15 +8,11 @@
 //------------------------------------------------------------------------------
 public static class GuiComponentIds {
 
-    public const int PauseListener = 0;
-
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "PauseListener"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(PauseListenerComponent)
     };
 }

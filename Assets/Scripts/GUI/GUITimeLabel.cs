@@ -9,14 +9,15 @@ public class GUITimeLabel : MonoBehaviour, ITickListerner {
 
     public void TickChanged()
     {
-        Debug.Log ("tick changed");
-        var tick = Pools.sharedInstance.core.tick.currentTick;
-		var sec = (tick / 60) % 60;
-		var min = (tick / 3600);
-		var secText = sec > 9 ? "" + sec : "0" + sec;
-		var minText = min > 9 ? "" + min : "0" + min;
+        var totalTick = Pools.sharedInstance.core.tickEntity.totalTick.amount;
+		GetComponent<Text>().text = totalTick.ToString ("0.00");
 		
-		GetComponent<Text>().text = minText + ":" + secText;
+		// var sec = (Mathf.CeilToInt (totalTick) / 60) % 60;
+		// var min = (Mathf.CeilToInt (totalTick) / 3600);
+		// var secText = sec > 9 ? "" + sec : "0" + sec;
+		// var minText = min > 9 ? "" + min : "0" + min;
+		
+		// GetComponent<Text>().text = minText + ":" + secText;
     }
 
 }

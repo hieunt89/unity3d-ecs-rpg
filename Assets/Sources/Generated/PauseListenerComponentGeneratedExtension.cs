@@ -12,37 +12,37 @@ namespace Entitas {
 
     public partial class Entity {
 
-        public PauseListenerComponent pauseListener { get { return (PauseListenerComponent)GetComponent(GuiComponentIds.PauseListener); } }
-        public bool hasPauseListener { get { return HasComponent(GuiComponentIds.PauseListener); } }
+        public PauseListenerComponent pauseListener { get { return (PauseListenerComponent)GetComponent(CoreComponentIds.PauseListener); } }
+        public bool hasPauseListener { get { return HasComponent(CoreComponentIds.PauseListener); } }
 
         public Entity AddPauseListener(IPauseListener newListener) {
-            var component = CreateComponent<PauseListenerComponent>(GuiComponentIds.PauseListener);
+            var component = CreateComponent<PauseListenerComponent>(CoreComponentIds.PauseListener);
             component.listener = newListener;
-            return AddComponent(GuiComponentIds.PauseListener, component);
+            return AddComponent(CoreComponentIds.PauseListener, component);
         }
 
         public Entity ReplacePauseListener(IPauseListener newListener) {
-            var component = CreateComponent<PauseListenerComponent>(GuiComponentIds.PauseListener);
+            var component = CreateComponent<PauseListenerComponent>(CoreComponentIds.PauseListener);
             component.listener = newListener;
-            ReplaceComponent(GuiComponentIds.PauseListener, component);
+            ReplaceComponent(CoreComponentIds.PauseListener, component);
             return this;
         }
 
         public Entity RemovePauseListener() {
-            return RemoveComponent(GuiComponentIds.PauseListener);
+            return RemoveComponent(CoreComponentIds.PauseListener);
         }
     }
 }
 
-    public partial class GuiMatcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherPauseListener;
 
         public static IMatcher PauseListener {
             get {
                 if(_matcherPauseListener == null) {
-                    var matcher = (Matcher)Matcher.AllOf(GuiComponentIds.PauseListener);
-                    matcher.componentNames = GuiComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.PauseListener);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherPauseListener = matcher;
                 }
 

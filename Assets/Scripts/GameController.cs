@@ -27,9 +27,9 @@ public class GameController : MonoBehaviour {
 			// Time
 			.Add (pools.core.CreateSystem (new TickUpdateSystem()))
 			.Add (pools.core.CreateSystem (new NotifyTickListenersSystem()))
-
-			// .Add (pools.core.CreateSystem (new TimeSystem()))
-			// .Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
+			
+			.Add (pools.core.CreateSystem (new PauseUpdateSystem()))
+			.Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
 			
 			
 			// Input

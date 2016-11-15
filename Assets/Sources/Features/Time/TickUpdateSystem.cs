@@ -1,6 +1,7 @@
 ﻿using Entitas;
+using UnityEngine;
 
-public class TickUpdateSystem : ISetPool, IInitializeSystem, IExecuteSystem
+public class TickUpdateSystem : ISetPool, IInitializeSystem, IExecuteSystem 
 {	
     Pool _pool;
 
@@ -11,12 +12,19 @@ public class TickUpdateSystem : ISetPool, IInitializeSystem, IExecuteSystem
 
     public void Initialize()
     {
-        _pool.ReplaceTick (0);
+        _pool.ReplaceTick (0f)
+			.ReplaceTimeScale (1f)
+            .ReplaceTotalTick (0f)
+			;
     }
 
     public void Execute()
     {
-        if (!_pool.isPause)
-            _pool.ReplaceTick(_pool.tick.currentTick + 1);
+        if (!_pool.isPause) {
+            var e = _pool.tickEntity;
+            e.ReplaceTick(Time.deltaTime)
+			.ReplaceTotalTick (e.totalTick.amount + e.tick.currentTick)
+            ;
+        } 
     }
 }

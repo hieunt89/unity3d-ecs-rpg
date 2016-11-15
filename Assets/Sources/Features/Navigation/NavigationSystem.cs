@@ -18,7 +18,6 @@ public class NavigationSystem : ISetPool, IReactiveSystem { //, IEnsureComponent
 
 	public void Execute (List<Entity> entities)
 	{
-		Debug.Log ("tick");
 		var characterEntity = _pool.characterEntity;
 		var agent = characterEntity.view.gameObject.GetComponent <NavMeshAgent> ();
 		if (agent == null) 
