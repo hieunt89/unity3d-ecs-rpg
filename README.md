@@ -29,3 +29,8 @@ TODO: Write credits
 ## License
 
 TODO: Write license
+
+## TODO
+1. Time system - second base (use InvokeRepeating + Time.time)
+2. Navigation system base on tick (second) instead of destination
+3. Regeneration system base on tick (second)
