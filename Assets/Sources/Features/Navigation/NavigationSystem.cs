@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class NavigationSystem : ISetPool, IReactiveSystem {
+public class NavigationSystem : ISetPool, IReactiveSystem { //, IEnsureComponents {
 	Pool _pool;
 
 	public void SetPool (Pool pool)
@@ -10,8 +10,15 @@ public class NavigationSystem : ISetPool, IReactiveSystem {
 		_pool = pool;
 	}
 
+//	public IMatcher ensureComponents {
+//		get {
+//			return CoreMatcher.Destination;
+//		}
+//	}
+
 	public void Execute (List<Entity> entities)
 	{
+		Debug.Log ("tick");
 		var characterEntity = _pool.characterEntity;
 		var agent = characterEntity.view.gameObject.GetComponent <NavMeshAgent> ();
 		if (agent == null) 
@@ -28,7 +35,8 @@ public class NavigationSystem : ISetPool, IReactiveSystem {
 
 	public TriggerOnEvent trigger {
 		get {
-			return CoreMatcher.Destination.OnEntityAdded ();
+//			return CoreMatcher.Destination.OnEntityAdded ();
+			return CoreMatcher.Tick.OnEntityAdded ();
 		}
 	}
 }

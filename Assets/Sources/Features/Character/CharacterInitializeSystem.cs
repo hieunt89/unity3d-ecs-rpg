@@ -19,6 +19,7 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddBaseManaPoint (100)
 			.AddCurrentLevel (1)
 			.AddCurrentExp (50)	
+			.AddDestination (10f, 0f, 10f)
 			.AddMoveSpeed (10f)
 			.AddTurnSpeed (500f)		
 			;

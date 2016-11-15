@@ -2,14 +2,20 @@
 using System.Collections;
 
 public class Test : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+	void Start() {
+		InvokeRepeating ("DoSomething", 0, 1f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		Debug.Log (Time.time);
-		Time.timeScale = 0.5f;
+
+	void DoSomething () {
+		Debug.Log ("second");
+	}
+
+	public void PauseBtn () {
+		Time.timeScale = 0f;
+	}
+
+	public void SetTimeScale () {
+		Time.timeScale = 2f;
+
 	}
 }

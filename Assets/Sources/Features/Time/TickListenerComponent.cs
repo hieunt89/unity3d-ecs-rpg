@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Gui]
+[Core]
 public class TickListenerComponent : IComponent {
 	public ITickListerner listener;
 }

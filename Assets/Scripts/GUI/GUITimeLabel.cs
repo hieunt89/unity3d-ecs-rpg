@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GUITimeLabel : MonoBehaviour, ITickListerner {
     void Start () {
-		Pools.sharedInstance.gui.CreateEntity().AddTickListener(this);
+		 Pools.sharedInstance.core.CreateEntity().AddTickListener(this);
 	}
 
     public void TickChanged()

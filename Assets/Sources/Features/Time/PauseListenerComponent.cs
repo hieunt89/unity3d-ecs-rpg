@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Gui]
+[Core]
 public class PauseListenerComponent : IComponent {
 	public IPauseListener listener;
 }

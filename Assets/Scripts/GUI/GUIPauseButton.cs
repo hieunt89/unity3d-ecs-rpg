@@ -6,15 +6,13 @@ using Entitas;
 public class GUIPauseButton : MonoBehaviour {
 	Button mButton;
 
-	void Awake () {
-//		Pools.sharedInstance.pool.CreateEntity ().
-	}
-
 	void Start () {
 		mButton = GetComponent <Button> ();
 		if (mButton) {
 			mButton.onClick.AddListener (() => {
 				Debug.Log ("Pause");
+				Pools.sharedInstance.core.isPause = !Pools.sharedInstance.core.isPause;
+				GetComponentInChildren <Text>().text = Pools.sharedInstance.core.isPause ? "Resume" : "Pause";
 			});
 		}
 	}

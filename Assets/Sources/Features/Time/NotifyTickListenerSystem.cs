@@ -16,6 +16,6 @@ public class NotifyTickListenersSystem : IReactiveSystem, ISetPool
 
 	public void SetPool(Pool pool){
 		_pool = pool;
-		listeners = _pool.GetGroup(GuiMatcher.TickListener);
+		listeners = _pool.GetGroup(CoreMatcher.TickListener);
 	}
 }

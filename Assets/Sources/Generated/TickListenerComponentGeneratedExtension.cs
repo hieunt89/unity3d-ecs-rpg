@@ -12,37 +12,37 @@ namespace Entitas {
 
     public partial class Entity {
 
-        public TickListenerComponent tickListener { get { return (TickListenerComponent)GetComponent(GuiComponentIds.TickListener); } }
-        public bool hasTickListener { get { return HasComponent(GuiComponentIds.TickListener); } }
+        public TickListenerComponent tickListener { get { return (TickListenerComponent)GetComponent(CoreComponentIds.TickListener); } }
+        public bool hasTickListener { get { return HasComponent(CoreComponentIds.TickListener); } }
 
         public Entity AddTickListener(ITickListerner newListener) {
-            var component = CreateComponent<TickListenerComponent>(GuiComponentIds.TickListener);
+            var component = CreateComponent<TickListenerComponent>(CoreComponentIds.TickListener);
             component.listener = newListener;
-            return AddComponent(GuiComponentIds.TickListener, component);
+            return AddComponent(CoreComponentIds.TickListener, component);
         }
 
         public Entity ReplaceTickListener(ITickListerner newListener) {
-            var component = CreateComponent<TickListenerComponent>(GuiComponentIds.TickListener);
+            var component = CreateComponent<TickListenerComponent>(CoreComponentIds.TickListener);
             component.listener = newListener;
-            ReplaceComponent(GuiComponentIds.TickListener, component);
+            ReplaceComponent(CoreComponentIds.TickListener, component);
             return this;
         }
 
         public Entity RemoveTickListener() {
-            return RemoveComponent(GuiComponentIds.TickListener);
+            return RemoveComponent(CoreComponentIds.TickListener);
         }
     }
 }
 
-    public partial class GuiMatcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherTickListener;
 
         public static IMatcher TickListener {
             get {
                 if(_matcherTickListener == null) {
-                    var matcher = (Matcher)Matcher.AllOf(GuiComponentIds.TickListener);
-                    matcher.componentNames = GuiComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.TickListener);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherTickListener = matcher;
                 }
 

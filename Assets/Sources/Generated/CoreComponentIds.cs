@@ -28,12 +28,13 @@ public static class CoreComponentIds {
     public const int Position = 17;
     public const int Second = 18;
     public const int Tick = 19;
-    public const int TickSpeed = 20;
-    public const int TimeScale = 21;
-    public const int TurnSpeed = 22;
-    public const int View = 23;
+    public const int TickListener = 20;
+    public const int TickSpeed = 21;
+    public const int TimeScale = 22;
+    public const int TurnSpeed = 23;
+    public const int View = 24;
 
-    public const int TotalComponents = 24;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "BaseHitPoint",
@@ -56,6 +57,7 @@ public static class CoreComponentIds {
         "Position",
         "Second",
         "Tick",
+        "TickListener",
         "TickSpeed",
         "TimeScale",
         "TurnSpeed",
@@ -83,6 +85,7 @@ public static class CoreComponentIds {
         typeof(PositionComponent),
         typeof(SecondComponent),
         typeof(TickComponent),
+        typeof(TickListenerComponent),
         typeof(TickSpeedComponent),
         typeof(TimeScaleComponent),
         typeof(TurnSpeedComponent),
