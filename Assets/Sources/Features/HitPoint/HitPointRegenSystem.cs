@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Entitas;
-using UnityEngine;
+﻿using Entitas;
 
-public class HitPointRegenerationSystem : ISetPool, IReactiveSystem
+public class HitPointRegenSystem : ISetPool, IReactiveSystem
 {
 	Pool _pool;
 	Group _group;
@@ -16,8 +13,14 @@ public class HitPointRegenerationSystem : ISetPool, IReactiveSystem
         }
     }
 
-    public void Execute(List<Entity> entities)
+    public void Execute(System.Collections.Generic.List<Entity> entities)
     {
+		for (int i = 0; i < entities.Count; i++) {
+			var e = entities [i];
+			if (e.currentHitPoint.amount < e.hitPoint.amount) {
+
+			}
+		}
     }
 
     public void SetPool(Pool pool)

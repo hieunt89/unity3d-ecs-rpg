@@ -1,11 +1,17 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class HitPointUpdateSystem : IReactiveSystem {
-	
+public class HitPointUpdateSystem : IReactiveSystem, IEnsureComponents {
+
+	public IMatcher ensureComponents {
+		get {
+			return CoreMatcher.BaseHitPoint;
+		}
+	}
+
 	public TriggerOnEvent trigger {
 		get {
-			return Matcher.AllOf(CoreMatcher.CurrentLevel, CoreMatcher.BaseHitPoint).OnEntityAdded();
+			return CoreMatcher.CurrentLevel.OnEntityAdded();
 		}
 	}
 

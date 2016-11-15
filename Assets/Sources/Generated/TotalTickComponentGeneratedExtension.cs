@@ -6,40 +6,43 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Entitas;
+
 namespace Entitas {
 
     public partial class Entity {
 
-        public TotalTickComponent totalTick { get { return (TotalTickComponent)GetComponent(ComponentIds.TotalTick); } }
-        public bool hasTotalTick { get { return HasComponent(ComponentIds.TotalTick); } }
+        public TotalTickComponent totalTick { get { return (TotalTickComponent)GetComponent(CoreComponentIds.TotalTick); } }
+        public bool hasTotalTick { get { return HasComponent(CoreComponentIds.TotalTick); } }
 
-        public Entity AddTotalTick(float newValue) {
-            var component = CreateComponent<TotalTickComponent>(ComponentIds.TotalTick);
-            component.amount = newValue;
-            return AddComponent(ComponentIds.TotalTick, component);
+        public Entity AddTotalTick(float newAmount) {
+            var component = CreateComponent<TotalTickComponent>(CoreComponentIds.TotalTick);
+            component.amount = newAmount;
+            return AddComponent(CoreComponentIds.TotalTick, component);
         }
 
-        public Entity ReplaceTotalTick(float newValue) {
-            var component = CreateComponent<TotalTickComponent>(ComponentIds.TotalTick);
-            component.amount = newValue;
-            ReplaceComponent(ComponentIds.TotalTick, component);
+        public Entity ReplaceTotalTick(float newAmount) {
+            var component = CreateComponent<TotalTickComponent>(CoreComponentIds.TotalTick);
+            component.amount = newAmount;
+            ReplaceComponent(CoreComponentIds.TotalTick, component);
             return this;
         }
 
         public Entity RemoveTotalTick() {
-            return RemoveComponent(ComponentIds.TotalTick);
+            return RemoveComponent(CoreComponentIds.TotalTick);
         }
     }
+}
 
-    public partial class Matcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherTotalTick;
 
         public static IMatcher TotalTick {
             get {
                 if(_matcherTotalTick == null) {
-                    var matcher = (Matcher)Matcher.AllOf(ComponentIds.TotalTick);
-                    matcher.componentNames = ComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.TotalTick);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherTotalTick = matcher;
                 }
 
@@ -47,4 +50,3 @@ namespace Entitas {
             }
         }
     }
-}

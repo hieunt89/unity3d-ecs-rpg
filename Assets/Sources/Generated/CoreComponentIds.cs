@@ -11,40 +11,43 @@ public static class CoreComponentIds {
     public const int BaseHitPoint = 0;
     public const int BaseManaPoint = 1;
     public const int Character = 2;
-    public const int CurrentExp = 3;
-    public const int CurrentHitPoint = 4;
-    public const int CurrentLevel = 5;
-    public const int Destination = 6;
-    public const int Exp = 7;
-    public const int HitPoint = 8;
-    public const int HitPointRegenerationRate = 9;
-    public const int LevelUp = 10;
-    public const int ManaPoint = 11;
-    public const int Movable = 12;
-    public const int MoveSpeed = 13;
-    public const int Name = 14;
-    public const int Pause = 15;
-    public const int PauseListener = 16;
-    public const int Position = 17;
-    public const int Tick = 18;
-    public const int TickListener = 19;
-    public const int TimeScale = 20;
-    public const int TurnSpeed = 21;
-    public const int View = 22;
+    public const int Corountine = 3;
+    public const int CurrentExp = 4;
+    public const int CurrentHitPoint = 5;
+    public const int CurrentLevel = 6;
+    public const int Destination = 7;
+    public const int Exp = 8;
+    public const int HitPoint = 9;
+    public const int HitPointRegen = 10;
+    public const int LevelUp = 11;
+    public const int ManaPoint = 12;
+    public const int Movable = 13;
+    public const int MoveSpeed = 14;
+    public const int Name = 15;
+    public const int Pause = 16;
+    public const int PauseListener = 17;
+    public const int Position = 18;
+    public const int Tick = 19;
+    public const int TickListener = 20;
+    public const int TimeScale = 21;
+    public const int TotalTick = 22;
+    public const int TurnSpeed = 23;
+    public const int View = 24;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "BaseHitPoint",
         "BaseManaPoint",
         "Character",
+        "Corountine",
         "CurrentExp",
         "CurrentHitPoint",
         "CurrentLevel",
         "Destination",
         "Exp",
         "HitPoint",
-        "HitPointRegenerationRate",
+        "HitPointRegen",
         "LevelUp",
         "ManaPoint",
         "Movable",
@@ -56,6 +59,7 @@ public static class CoreComponentIds {
         "Tick",
         "TickListener",
         "TimeScale",
+        "TotalTick",
         "TurnSpeed",
         "View"
     };
@@ -64,13 +68,14 @@ public static class CoreComponentIds {
         typeof(BaseHitPointComponent),
         typeof(BaseManaPointComponent),
         typeof(CharacterComponent),
+        typeof(CorountineComponent),
         typeof(CurrentExpComponent),
         typeof(CurrentHitPointComponent),
         typeof(CurrentLevelComponent),
         typeof(DestinationComponent),
         typeof(ExpComponent),
         typeof(HitPointComponent),
-        typeof(HitPointRegenerationRateComponent),
+        typeof(HitPointRegenComponent),
         typeof(LevelUpComponent),
         typeof(ManaPointComponent),
         typeof(MovableComponent),
@@ -82,6 +87,7 @@ public static class CoreComponentIds {
         typeof(TickComponent),
         typeof(TickListenerComponent),
         typeof(TimeScaleComponent),
+        typeof(TotalTickComponent),
         typeof(TurnSpeedComponent),
         typeof(ViewComponent)
     };
