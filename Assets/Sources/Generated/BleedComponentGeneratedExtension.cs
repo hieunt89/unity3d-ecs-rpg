@@ -12,41 +12,41 @@ namespace Entitas {
 
     public partial class Entity {
 
-        public BleedComponent bleed { get { return (BleedComponent)GetComponent(SkillComponentIds.Bleed); } }
-        public bool hasBleed { get { return HasComponent(SkillComponentIds.Bleed); } }
+        public BleedComponent bleed { get { return (BleedComponent)GetComponent(CoreComponentIds.Bleed); } }
+        public bool hasBleed { get { return HasComponent(CoreComponentIds.Bleed); } }
 
         public Entity AddBleed(float newRate, float newInterval, float newDuration) {
-            var component = CreateComponent<BleedComponent>(SkillComponentIds.Bleed);
+            var component = CreateComponent<BleedComponent>(CoreComponentIds.Bleed);
             component.rate = newRate;
             component.interval = newInterval;
             component.duration = newDuration;
-            return AddComponent(SkillComponentIds.Bleed, component);
+            return AddComponent(CoreComponentIds.Bleed, component);
         }
 
         public Entity ReplaceBleed(float newRate, float newInterval, float newDuration) {
-            var component = CreateComponent<BleedComponent>(SkillComponentIds.Bleed);
+            var component = CreateComponent<BleedComponent>(CoreComponentIds.Bleed);
             component.rate = newRate;
             component.interval = newInterval;
             component.duration = newDuration;
-            ReplaceComponent(SkillComponentIds.Bleed, component);
+            ReplaceComponent(CoreComponentIds.Bleed, component);
             return this;
         }
 
         public Entity RemoveBleed() {
-            return RemoveComponent(SkillComponentIds.Bleed);
+            return RemoveComponent(CoreComponentIds.Bleed);
         }
     }
 }
 
-    public partial class SkillMatcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherBleed;
 
         public static IMatcher Bleed {
             get {
                 if(_matcherBleed == null) {
-                    var matcher = (Matcher)Matcher.AllOf(SkillComponentIds.Bleed);
-                    matcher.componentNames = SkillComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.Bleed);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherBleed = matcher;
                 }
 

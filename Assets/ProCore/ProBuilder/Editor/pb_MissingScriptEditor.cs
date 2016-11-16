@@ -1,4 +1,3 @@
-#define PROTOTYPE
 /**
  * Repairs missing pb_Object and pb_Entity references.  It is based
  * on this article by Unity Gems: http://unitygems.com/lateral1/

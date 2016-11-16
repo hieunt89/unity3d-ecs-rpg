@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new ExpUpdateSystem()))		
 
 			// Skill
-			.Add (pools.skill.CreateSystem (new BleedSystem()))
+			.Add (pools.core.CreateSystem (new BleedSystem()))
 			;
 
 	}

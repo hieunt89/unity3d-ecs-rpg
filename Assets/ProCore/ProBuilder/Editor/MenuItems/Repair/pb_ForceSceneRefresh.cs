@@ -1,4 +1,3 @@
-#define PROTOTYPE
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
@@ -13,7 +12,7 @@ namespace ProBuilder2.Actions
 	{
 		[MenuItem("Tools/" + pb_Constant.PRODUCT_NAME + "/Repair/Force Refresh Scene", false, pb_Constant.MENU_REPAIR)]
 		public static void MenuForceSceneRefresh()
-		{	
+		{
 			ForceRefresh(true);
 		}
 
@@ -31,10 +30,15 @@ namespace ProBuilder2.Actions
 					"Reshaping pb_Object " + all[i].id + ".",
 					((float)i / all.Length));
 
-				all[i].ToMesh();
-				all[i].Refresh();
-				all[i].Optimize();
+				try
+				{
+					all[i].ToMesh();
+					all[i].Refresh();
+					all[i].Optimize();
+				}
+				catch {}
 			}
+
 			if(interactive)
 			{
 				EditorUtility.ClearProgressBar();

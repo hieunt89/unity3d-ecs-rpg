@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Skill]
+[Core]
 public class BleedComponent : IComponent {
 	public float rate;
 	public float interval;

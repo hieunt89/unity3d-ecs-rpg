@@ -8,15 +8,11 @@
 //------------------------------------------------------------------------------
 public static class SkillComponentIds {
 
-    public const int Bleed = 0;
-
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "Bleed"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(BleedComponent)
     };
 }

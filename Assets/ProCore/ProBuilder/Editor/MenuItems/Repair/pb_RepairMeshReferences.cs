@@ -1,4 +1,3 @@
-#define PROTOTYPE
 #pragma warning disable 0168
 
 using UnityEngine;
