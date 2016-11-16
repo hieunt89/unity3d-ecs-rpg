@@ -8,35 +8,38 @@
 //------------------------------------------------------------------------------
 public static class CoreComponentIds {
 
-    public const int BaseHitPoint = 0;
-    public const int BaseManaPoint = 1;
-    public const int Character = 2;
-    public const int Corountine = 3;
-    public const int CurrentExp = 4;
-    public const int CurrentHitPoint = 5;
-    public const int CurrentLevel = 6;
-    public const int Destination = 7;
-    public const int Exp = 8;
-    public const int HitPoint = 9;
-    public const int HitPointRegen = 10;
-    public const int LevelUp = 11;
-    public const int ManaPoint = 12;
-    public const int Movable = 13;
-    public const int MoveSpeed = 14;
-    public const int Name = 15;
-    public const int Pause = 16;
-    public const int PauseListener = 17;
-    public const int Position = 18;
-    public const int Tick = 19;
-    public const int TickListener = 20;
-    public const int TimeScale = 21;
-    public const int TotalTick = 22;
-    public const int TurnSpeed = 23;
-    public const int View = 24;
+    public const int Active = 0;
+    public const int BaseHitPoint = 1;
+    public const int BaseManaPoint = 2;
+    public const int Character = 3;
+    public const int Corountine = 4;
+    public const int CurrentExp = 5;
+    public const int CurrentHitPoint = 6;
+    public const int CurrentLevel = 7;
+    public const int Destination = 8;
+    public const int Exp = 9;
+    public const int HitPoint = 10;
+    public const int HitPointRegen = 11;
+    public const int LevelUp = 12;
+    public const int ManaPoint = 13;
+    public const int Movable = 14;
+    public const int MoveSpeed = 15;
+    public const int Name = 16;
+    public const int Pause = 17;
+    public const int PauseListener = 18;
+    public const int Position = 19;
+    public const int Tick = 20;
+    public const int TickListener = 21;
+    public const int TimeScale = 22;
+    public const int TotalTick = 23;
+    public const int TurnSpeed = 24;
+    public const int View = 25;
+    public const int Wound = 26;
 
-    public const int TotalComponents = 25;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
+        "Active",
         "BaseHitPoint",
         "BaseManaPoint",
         "Character",
@@ -61,10 +64,12 @@ public static class CoreComponentIds {
         "TimeScale",
         "TotalTick",
         "TurnSpeed",
-        "View"
+        "View",
+        "Wound"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ActiveComponent),
         typeof(BaseHitPointComponent),
         typeof(BaseManaPointComponent),
         typeof(CharacterComponent),
@@ -89,6 +94,7 @@ public static class CoreComponentIds {
         typeof(TimeScaleComponent),
         typeof(TotalTickComponent),
         typeof(TurnSpeedComponent),
-        typeof(ViewComponent)
+        typeof(ViewComponent),
+        typeof(WoundComponent)
     };
 }

@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class HitPointUpdateSystem : IReactiveSystem, IEnsureComponents {
+public class HitPointUpgradeSystem : IReactiveSystem, IEnsureComponents {
 
 	public IMatcher ensureComponents {
 		get {

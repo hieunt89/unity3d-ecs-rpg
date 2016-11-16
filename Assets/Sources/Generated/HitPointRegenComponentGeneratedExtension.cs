@@ -15,17 +15,19 @@ namespace Entitas {
         public HitPointRegenComponent hitPointRegen { get { return (HitPointRegenComponent)GetComponent(CoreComponentIds.HitPointRegen); } }
         public bool hasHitPointRegen { get { return HasComponent(CoreComponentIds.HitPointRegen); } }
 
-        public Entity AddHitPointRegen(float newRate, float newInterval) {
+        public Entity AddHitPointRegen(float newRate, float newInterval, float newDuration) {
             var component = CreateComponent<HitPointRegenComponent>(CoreComponentIds.HitPointRegen);
             component.rate = newRate;
             component.interval = newInterval;
+            component.duration = newDuration;
             return AddComponent(CoreComponentIds.HitPointRegen, component);
         }
 
-        public Entity ReplaceHitPointRegen(float newRate, float newInterval) {
+        public Entity ReplaceHitPointRegen(float newRate, float newInterval, float newDuration) {
             var component = CreateComponent<HitPointRegenComponent>(CoreComponentIds.HitPointRegen);
             component.rate = newRate;
             component.interval = newInterval;
+            component.duration = newDuration;
             ReplaceComponent(CoreComponentIds.HitPointRegen, component);
             return this;
         }

@@ -20,6 +20,6 @@ C:\Users\fdj\Git\unity-ecs-practice\Temp\bin\Debug\UnityEngine.xml
 C:\Users\fdj\Git\unity-ecs-practice\Temp\bin\Debug\UnityEditor.xml
 C:\Users\fdj\Git\unity-ecs-practice\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\fdj\Git\unity-ecs-practice\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\fdj\Git\unity-ecs-practice\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\fdj\Git\unity-ecs-practice\obj\Debug\Assembly-CSharp.dll
 C:\Users\fdj\Git\unity-ecs-practice\obj\Debug\Assembly-CSharp.pdb
-C:\Users\fdj\Git\unity-ecs-practice\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
