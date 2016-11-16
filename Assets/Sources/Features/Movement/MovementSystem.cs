@@ -12,7 +12,6 @@ public class MovementSystem : ISetPool, IReactiveSystem {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
-		Debug.Log ("tick");
 	}
 
 	public TriggerOnEvent trigger {

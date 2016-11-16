@@ -22,16 +22,22 @@ namespace Entitas {
             return CreatePool("Input", InputComponentIds.TotalComponents, InputComponentIds.componentNames, InputComponentIds.componentTypes);
         }
 
-        public Pool[] allPools { get { return new [] { core, gui, input }; } }
+        public static Pool CreateSkillPool() {
+            return CreatePool("Skill", SkillComponentIds.TotalComponents, SkillComponentIds.componentNames, SkillComponentIds.componentTypes);
+        }
+
+        public Pool[] allPools { get { return new [] { core, gui, input, skill }; } }
 
         public Pool core;
         public Pool gui;
         public Pool input;
+        public Pool skill;
 
         public void SetAllPools() {
             core = CreateCorePool();
             gui = CreateGuiPool();
             input = CreateInputPool();
+            skill = CreateSkillPool();
         }
     }
 }

@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new PauseUpdateSystem()))
 			.Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
 			
-			
 			// Input
 			.Add (pools.input.CreateSystem (new MoveInputSystem()))
 			.Add (pools.input.CreateSystem (new ProcessMoveInputSystem()))
@@ -55,6 +54,9 @@ public class GameController : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new LevelSystem()))
 			.Add (pools.core.CreateSystem (new LevelUpSystem()))	
 			.Add (pools.core.CreateSystem (new ExpUpdateSystem()))		
+
+			// Skill
+			.Add (pools.skill.CreateSystem (new BleedSystem()))
 			;
 
 	}

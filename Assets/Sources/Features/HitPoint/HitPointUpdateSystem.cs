@@ -1,16 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class HitPointUpdateSystem : ISetPool, IEnsureComponents, IReactiveSystem {
-	Pool _pool;
-	Group _group;
-
-	public void SetPool (Pool pool)
-	{
-		_pool = pool;
-//		_group = _pool.GetGroup (Matcher.AllOf(CoreMatcher.CurrentHitPoint, CoreMatcher.HitPoint
-	}
-
+public class HitPointUpdateSystem : IEnsureComponents, IReactiveSystem {
 	public IMatcher ensureComponents {
 		get {
 			return Matcher.AllOf (CoreMatcher.HitPoint, CoreMatcher.CurrentHitPoint, CoreMatcher.Active);
