@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 
-public class LevelUpSystem : ISetPool, IReactiveSystem, ICleanupSystem {
+public class LevelUpSystem : ISetPool, IReactiveSystem {
 	Pool _pool;
 	Group _group;
 
@@ -25,12 +25,8 @@ public class LevelUpSystem : ISetPool, IReactiveSystem, ICleanupSystem {
 			
 			// update current exp - with remain exp
 			e.ReplaceCurrentExp (e.levelUp.remainExp);
-		}
-	}
-	public void Cleanup ()
-	{
-		foreach (var e in _group.GetEntities()) {
-			_pool.DestroyEntity (e);
+
+			e.RemoveLevelUp ();
 		}
 	}
 }

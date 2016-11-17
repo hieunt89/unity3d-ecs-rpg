@@ -2,7 +2,7 @@
 
 public class ExpUpdateSystem : ISetPool, IExecuteSystem
 {
-	  Pool _pool;
+  	Pool _pool;
     public void SetPool(Pool pool)
     {
 		  _pool = pool;
@@ -10,9 +10,9 @@ public class ExpUpdateSystem : ISetPool, IExecuteSystem
     public void Execute()
     {
 	  	var characterEntity = _pool.characterEntity;
-      if (characterEntity.currentExp.value >= characterEntity.exp.value) {
-        var remainExp = characterEntity.currentExp.value - characterEntity.exp.value;
-        characterEntity.AddLevelUp (remainExp);
-      }
+      	if (characterEntity.currentExp.value >= characterEntity.exp.value) {
+	        var remainExp = characterEntity.currentExp.value - characterEntity.exp.value;
+	        characterEntity.AddLevelUp (remainExp);
+      	}
     }
 }
