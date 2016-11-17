@@ -18,7 +18,6 @@ public class HitPointRegenSystem : ISetPool, IReactiveSystem
     {
 		if (_group.count <= 0)
 			return;
-		
 		foreach (var e in _group.GetEntities()) {
 			if (e.hitPointRegen.duration <= 0) {
 				var newAmount = e.currentHitPoint.amount + (e.hitPoint.amount * Mathf.Clamp01 (e.hitPointRegen.rate));
@@ -34,6 +33,6 @@ public class HitPointRegenSystem : ISetPool, IReactiveSystem
     public void SetPool(Pool pool)
     {
 		_pool = pool;
-		_group = _pool.GetGroup(Matcher.AllOf (CoreMatcher.CurrentHitPoint, CoreMatcher.Wound));
+		_group = _pool.GetGroup(Matcher.AllOf (CoreMatcher.Wound, CoreMatcher.CurrentHitPoint, CoreMatcher.HitPointRegen));
     }
 }

@@ -7,7 +7,7 @@ public class BleedSystem : ISetPool, IReactiveSystem {
 	public void SetPool (Pool pool)
 	{
 		_pool = pool;
-		_group = _pool.GetGroup (CoreMatcher.Bleed);
+		_group = _pool.GetGroup (Matcher.AllOf (CoreMatcher.Bleed, CoreMatcher.CurrentHitPoint, CoreMatcher.HitPoint));
 	}
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
@@ -15,8 +15,16 @@ public class BleedSystem : ISetPool, IReactiveSystem {
 		if (_group.count <= 0) return;
 
 		foreach (var e in _group.GetEntities()) {
-			var newAmount = e.currentHitPoint.amount - (e.hitPoint.amount * e.bleed.rate);
-			e.ReplaceCurrentHitPoint(Mathf.Clamp (Mathf.FloorToInt (newAmount), 0, e.hitPoint.amount));
+			if (e.currentHitPoint.amount > 0) {
+				if (e.bleed.duration <= 0) {
+					var newAmount = e.currentHitPoint.amount - (e.hitPoint.amount * e.bleed.rate);
+					e.ReplaceCurrentHitPoint (Mathf.Clamp (Mathf.FloorToInt (newAmount), 0, e.hitPoint.amount));
+
+					e.bleed.duration = e.bleed.interval;
+				} else {
+					e.bleed.duration -= entities.SingleEntity ().tick.currentTick;
+				}
+			}
 		}
 	}
 
