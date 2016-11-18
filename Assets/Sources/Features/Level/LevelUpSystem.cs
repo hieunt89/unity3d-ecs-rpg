@@ -4,12 +4,12 @@ using System;
 
 public class LevelUpSystem : ISetPool, IReactiveSystem {
 	Pool _pool;
-	Group _group;
+	Group levelUps;
 
 	public void SetPool (Pool pool)
 	{
 		_pool = pool;
-		_group = _pool.GetGroup (CoreMatcher.LevelUp);
+		levelUps = _pool.GetGroup (CoreMatcher.LevelUp);
 	}
 	public TriggerOnEvent trigger {
 		get {
@@ -19,10 +19,10 @@ public class LevelUpSystem : ISetPool, IReactiveSystem {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
-		for (int index = 0; index < entities.Count; index++) {
-			var e = entities [index];
+		if (levelUps.count <= 0) return;
+		foreach (var e in levelUps.GetEntities ()) {
 			e.ReplaceCurrentLevel (e.currentLevel.value + 1); 
-			
+
 			// update current exp - with remain exp
 			e.ReplaceCurrentExp (e.levelUp.remainExp);
 

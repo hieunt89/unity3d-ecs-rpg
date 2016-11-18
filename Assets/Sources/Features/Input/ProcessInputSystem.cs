@@ -5,7 +5,7 @@ using UnityEngine;
 
 public sealed class ProcessMoveInputSystem : ISetPools, IReactiveSystem {
 
-    public TriggerOnEvent trigger { get { return InputMatcher.Input.OnEntityAdded(); } }
+    public TriggerOnEvent trigger { get { return InputMatcher.MoveInput.OnEntityAdded(); } }
 
 	Pools _pools;
 
@@ -16,8 +16,8 @@ public sealed class ProcessMoveInputSystem : ISetPools, IReactiveSystem {
 
     public void Execute(List<Entity> entities) {
         var inputEntity = entities.SingleEntity();
-        var input = inputEntity.input;
+		var moveInput = inputEntity.moveInput;
 
-		_pools.core.characterEntity.ReplaceDestination (input.x, input.y, input.z);
+		_pools.core.characterEntity.ReplaceDestination (moveInput.x, moveInput.y, moveInput.z);
     }
 }

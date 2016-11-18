@@ -19,3 +19,4 @@
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/fdj/Git/unity3d-ecs-example/Temp/bin/Debug/pb_Stl.dll
