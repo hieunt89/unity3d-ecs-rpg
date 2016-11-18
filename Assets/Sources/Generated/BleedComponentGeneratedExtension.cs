@@ -15,19 +15,19 @@ namespace Entitas {
         public BleedComponent bleed { get { return (BleedComponent)GetComponent(CoreComponentIds.Bleed); } }
         public bool hasBleed { get { return HasComponent(CoreComponentIds.Bleed); } }
 
-        public Entity AddBleed(float newRate, float newInterval, float newDuration) {
+        public Entity AddBleed(float newRate, float newInterval, float newElapse) {
             var component = CreateComponent<BleedComponent>(CoreComponentIds.Bleed);
             component.rate = newRate;
             component.interval = newInterval;
-            component.duration = newDuration;
+            component.elapse = newElapse;
             return AddComponent(CoreComponentIds.Bleed, component);
         }
 
-        public Entity ReplaceBleed(float newRate, float newInterval, float newDuration) {
+        public Entity ReplaceBleed(float newRate, float newInterval, float newElapse) {
             var component = CreateComponent<BleedComponent>(CoreComponentIds.Bleed);
             component.rate = newRate;
             component.interval = newInterval;
-            component.duration = newDuration;
+            component.elapse = newElapse;
             ReplaceComponent(CoreComponentIds.Bleed, component);
             return this;
         }

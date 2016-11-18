@@ -16,13 +16,13 @@ public class BleedSystem : ISetPool, IReactiveSystem {
 
 		foreach (var e in _group.GetEntities()) {
 			if (e.currentHitPoint.amount > 0) {
-				if (e.bleed.duration <= 0) {
+				if (e.bleed.elapse <= 0) {
 					var newAmount = e.currentHitPoint.amount - (e.hitPoint.amount * e.bleed.rate);
 					e.ReplaceCurrentHitPoint (Mathf.Clamp (Mathf.FloorToInt (newAmount), 0, e.hitPoint.amount));
 
-					e.bleed.duration = e.bleed.interval;
+					e.bleed.elapse = e.bleed.interval;
 				} else {
-					e.bleed.duration -= entities.SingleEntity ().tick.currentTick;
+					e.bleed.elapse -= entities.SingleEntity ().tick.currentTick;
 				}
 			}
 		}

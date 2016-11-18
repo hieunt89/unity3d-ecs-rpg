@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 [Core]
-public class BleedComponent : IComponent {
+public class SlowMovementComponent : IComponent {
 	public float rate;
 	public float interval;
 	public float elapse;

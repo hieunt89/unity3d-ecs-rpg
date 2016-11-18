@@ -29,15 +29,16 @@ public static class CoreComponentIds {
     public const int Pause = 18;
     public const int PauseListener = 19;
     public const int Position = 20;
-    public const int Tick = 21;
-    public const int TickListener = 22;
-    public const int TimeScale = 23;
-    public const int TotalTick = 24;
-    public const int TurnSpeed = 25;
-    public const int View = 26;
-    public const int Wound = 27;
+    public const int SlowMovement = 21;
+    public const int Tick = 22;
+    public const int TickListener = 23;
+    public const int TimeScale = 24;
+    public const int TotalTick = 25;
+    public const int TurnSpeed = 26;
+    public const int View = 27;
+    public const int Wound = 28;
 
-    public const int TotalComponents = 28;
+    public const int TotalComponents = 29;
 
     public static readonly string[] componentNames = {
         "Active",
@@ -61,6 +62,7 @@ public static class CoreComponentIds {
         "Pause",
         "PauseListener",
         "Position",
+        "SlowMovement",
         "Tick",
         "TickListener",
         "TimeScale",
@@ -92,6 +94,7 @@ public static class CoreComponentIds {
         typeof(PauseComponent),
         typeof(PauseListenerComponent),
         typeof(PositionComponent),
+        typeof(SlowMovementComponent),
         typeof(TickComponent),
         typeof(TickListenerComponent),
         typeof(TimeScaleComponent),
