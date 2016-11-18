@@ -1,14 +1,17 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class SelectInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
+public class SelectInputSystem : ISetPool, IInitializeSystem, IExecuteSystem {
 
 	Pool _pool;
-	Group selectedInputs;
 
 	public void SetPool(Pool pool) {
 		_pool = pool;
-		selectedInputs = pool.GetGroup(InputMatcher.SelectInput);
+	}
+
+	public void Initialize ()
+	{
+		_pool.CreateEntity ().AddSelectInput (null, null);
 	}
 
 	public void Execute() {
@@ -24,17 +27,9 @@ public class SelectInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 					entity = view.GetComponent<EntityLink> ().Entity;
 				}
 				if (view != null && entity != null) {
-					_pool.CreateEntity()
-						.AddSelectInput(view, entity);
-				} else {
+					_pool.selectInputEntity.ReplaceSelectInput (view, entity);
 				}
 			}
-		}
-	}
-
-	public void Cleanup() {
-		foreach(var e in selectedInputs.GetEntities()) {
-			_pool.DestroyEntity(e);
 		}
 	}
 }

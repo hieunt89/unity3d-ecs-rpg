@@ -5,7 +5,7 @@ public class HitPointUpgradeSystem : IReactiveSystem, IEnsureComponents {
 
 	public IMatcher ensureComponents {
 		get {
-			return CoreMatcher.BaseHitPoint;
+			return Matcher.AllOf(CoreMatcher.Active, CoreMatcher.BaseHitPoint, CoreMatcher.HitPoint, CoreMatcher.CurrentHitPoint);
 		}
 	}
 
@@ -17,17 +17,18 @@ public class HitPointUpgradeSystem : IReactiveSystem, IEnsureComponents {
 
 	public void Execute (System.Collections.Generic.List<Entity> entities)
 	{
-		var characterEntity = entities.SingleEntity ();
-		//
-		int hitPoint = characterEntity.baseHitPoint.amount;
-		for (int levelIndex = 1; characterEntity.currentLevel.value > 1 && levelIndex < characterEntity.currentLevel.value; levelIndex++)
-		{
-			hitPoint = Mathf.FloorToInt (hitPoint * 1.1f);
-		}
-		characterEntity.ReplaceHitPoint (hitPoint);
+		foreach (var e in entities) {
+			//
+			int newAmount = e.baseHitPoint.amount;
+			for (int levelIndex = 1; e.currentLevel.value > 1 && levelIndex < e.currentLevel.value; levelIndex++)
+			{
+				newAmount = Mathf.FloorToInt (newAmount * 1.1f);
+			}
+			e.ReplaceHitPoint (newAmount);
 
-		//
-		characterEntity.ReplaceCurrentHitPoint (hitPoint);
+			//
+			e.ReplaceCurrentHitPoint (newAmount);
+		}
 	}
 
 }

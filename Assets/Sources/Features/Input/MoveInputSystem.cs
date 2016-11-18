@@ -4,11 +4,11 @@ using UnityEngine;
 public sealed class MoveInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 
     Pool _pool;
-    Group _inputs;
+    Group moveInputs;
 
     public void SetPool(Pool pool) {
         _pool = pool;
-		_inputs = pool.GetGroup(InputMatcher.MoveInput);
+		moveInputs = pool.GetGroup(InputMatcher.MoveInput);
     }
 
     public void Execute() {
@@ -19,7 +19,6 @@ public sealed class MoveInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
 			Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100);
             if(hit.collider != null) {
 				var pos = hit.point;
-
                 _pool.CreateEntity()
 					.AddMoveInput(pos.x, pos.y, pos.z);
             }
@@ -27,7 +26,7 @@ public sealed class MoveInputSystem : ISetPool, IExecuteSystem, ICleanupSystem {
     }
 
     public void Cleanup() {
-        foreach(var e in _inputs.GetEntities()) {
+		foreach(var e in moveInputs.GetEntities()) {
             _pool.DestroyEntity(e);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class HitPointUpdateSystem : IEnsureComponents, IReactiveSystem {
 	public IMatcher ensureComponents {
 		get {
-			return Matcher.AllOf (CoreMatcher.HitPoint, CoreMatcher.CurrentHitPoint, CoreMatcher.Active);
+			return Matcher.AllOf (CoreMatcher.Active, CoreMatcher.HitPoint, CoreMatcher.CurrentHitPoint);
 		}
 	}
 

@@ -15,9 +15,12 @@ public sealed class ProcessMoveInputSystem : ISetPools, IReactiveSystem {
 	}
 
     public void Execute(List<Entity> entities) {
-        var inputEntity = entities.SingleEntity();
-		var moveInput = inputEntity.moveInput;
+		var moveInputEntity = entities.SingleEntity ();
+		var moveInput = moveInputEntity.moveInput;
 
-		_pools.core.characterEntity.ReplaceDestination (moveInput.x, moveInput.y, moveInput.z);
+		var selectedEntity = _pools.input.selectInput.entity;
+		if (selectedEntity != null && selectedEntity.isMovable) {
+			selectedEntity.ReplaceDestination (moveInput.x, moveInput.y, moveInput.z);
+		}
     }
 }

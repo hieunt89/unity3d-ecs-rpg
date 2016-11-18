@@ -6,7 +6,7 @@ public class GUITimeLabel : MonoBehaviour, ITickListerner {
 	Text mText;
 
     void Start () {
-		 Pools.sharedInstance.core.CreateEntity().AddTickListener(this);
+	 	Pools.sharedInstance.core.CreateEntity().AddTickListener(this);
 		mText =GetComponent <Text> ();
 	}
 

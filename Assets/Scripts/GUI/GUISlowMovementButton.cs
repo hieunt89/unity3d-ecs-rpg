@@ -9,10 +9,10 @@ public class GUISlowMovementButton : MonoBehaviour {
 		mButton = GetComponent <Button> ();
 		if (mButton) {
 			mButton.onClick.AddListener (() => {
-				if (!Pools.sharedInstance.core.characterEntity.hasSlowMovement) {
-					Pools.sharedInstance.core.characterEntity.ReplaceSlowMovement(.5f, 10f, 10f);
+				if (!Pools.sharedInstance.input.selectInput.entity.hasSlowMovement) {
+					Pools.sharedInstance.input.selectInput.entity.ReplaceSlowMovement(.5f, 10f, 10f);
 				} else {
-					Pools.sharedInstance.core.characterEntity.RemoveSlowMovement();
+					Pools.sharedInstance.input.selectInput.entity.RemoveSlowMovement();
 				}
 			});
 		}

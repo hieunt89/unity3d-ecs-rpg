@@ -12,6 +12,7 @@ public class GUISelectedLabel : MonoBehaviour, ISelectInputListener {
 
 	public void OnSelected ()
 	{
-		mText.text = Pools.sharedInstance.input.selectInputEntity.selectInput.entity.name.value;
+		if (Pools.sharedInstance.input.selectInputEntity.selectInput.entity != null)
+			mText.text = Pools.sharedInstance.input.selectInputEntity.selectInput.entity.name.value;
 	}
 }
