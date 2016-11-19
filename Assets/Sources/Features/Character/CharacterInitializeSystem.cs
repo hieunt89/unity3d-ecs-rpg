@@ -24,5 +24,20 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddTurnSpeed (500f)		
 			;
 		;
+
+		_pool.CreateEntity ()
+			.IsActive (true)
+			.IsCharacter(true)
+			.AddName ("findujanvier")
+			.AddCurrentLevel (2)
+			.AddCurrentExp (500)
+			.AddBaseHitPoint (200)
+			.IsMovable (true)
+			.AddPosition (45f, 0f, 5f)
+			.AddDestination (45f, 0f, 5f)
+			.AddMoveSpeed (10f)
+			.AddTurnSpeed (500f)		
+			;
+		;
 	}
 }

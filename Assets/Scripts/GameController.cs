@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new HitPointRegenSystem()))
 			
 			// Level + EXP
-			.Add (pools.core.CreateSystem (new LevelSystem()))
+			.Add (pools.core.CreateSystem (new LevelInitializeSystem()))
 			.Add (pools.core.CreateSystem (new LevelUpSystem()))	
 			.Add (pools.core.CreateSystem (new ExpUpdateSystem()))		
 
