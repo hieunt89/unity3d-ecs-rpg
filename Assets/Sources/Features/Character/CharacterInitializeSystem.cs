@@ -17,8 +17,6 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddCurrentLevel (1)
 			.AddCurrentExp (50)
 			.AddBaseHitPoint (100)
-			.AddHitPoint (100)
-			.AddCurrentHitPoint (100)
 			.IsMovable (true)
 			.AddPosition (5f, 0f, 5f)
 			.AddDestination (5f, 0f, 5f)
