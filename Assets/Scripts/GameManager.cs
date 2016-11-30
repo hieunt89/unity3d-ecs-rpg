@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Entitas;
 
-public class GameController : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
 	Systems _systems;
 
