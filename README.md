@@ -38,5 +38,10 @@ TODO: Write license
 5. ability system [ref: https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/Abilities_Data_Driven]
 6. ability indicator
 7. game dificulty system [ref: https://en.wikipedia.org/wiki/Dynamic_game_difficulty_balancing]
+8. Loot system + inventory system
+9. quest system
+10. dialog system
+11. combat system
+12. combat log system
 
 
