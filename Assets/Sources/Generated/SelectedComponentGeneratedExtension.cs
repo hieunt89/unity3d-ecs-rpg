@@ -12,26 +12,24 @@ namespace Entitas {
 
     public partial class Entity {
 
-        public SelectedComponent selected { get { return (SelectedComponent)GetComponent(CoreComponentIds.Selected); } }
-        public bool hasSelected { get { return HasComponent(CoreComponentIds.Selected); } }
+        static readonly SelectedComponent selectedComponent = new SelectedComponent();
 
-        public Entity AddSelected(UnityEngine.GameObject newView, Entitas.Entity newEntity) {
-            var component = CreateComponent<SelectedComponent>(CoreComponentIds.Selected);
-            component.view = newView;
-            component.entity = newEntity;
-            return AddComponent(CoreComponentIds.Selected, component);
+        public bool isSelected {
+            get { return HasComponent(CoreComponentIds.Selected); }
+            set {
+                if(value != isSelected) {
+                    if(value) {
+                        AddComponent(CoreComponentIds.Selected, selectedComponent);
+                    } else {
+                        RemoveComponent(CoreComponentIds.Selected);
+                    }
+                }
+            }
         }
 
-        public Entity ReplaceSelected(UnityEngine.GameObject newView, Entitas.Entity newEntity) {
-            var component = CreateComponent<SelectedComponent>(CoreComponentIds.Selected);
-            component.view = newView;
-            component.entity = newEntity;
-            ReplaceComponent(CoreComponentIds.Selected, component);
+        public Entity IsSelected(bool value) {
+            isSelected = value;
             return this;
-        }
-
-        public Entity RemoveSelected() {
-            return RemoveComponent(CoreComponentIds.Selected);
         }
     }
 }

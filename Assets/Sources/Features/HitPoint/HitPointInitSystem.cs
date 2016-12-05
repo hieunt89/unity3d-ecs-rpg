@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
+
 public class HitPointInitializeSystem : IReactiveSystem {
     public TriggerOnEvent trigger
     {
@@ -12,10 +13,11 @@ public class HitPointInitializeSystem : IReactiveSystem {
 
     public void Execute(List<Entity> entities)
     {
+		Debug.Log ("test");
 		foreach (var e in entities)
 		{
 			e.AddHitPoint (e.baseHitPoint.amount);
-			e.AddCurrentHitPoint (e.hitPoint.amount);
+			e.AddCurrentHitPoint (e.baseHitPoint.amount);
 		}
     }
 }

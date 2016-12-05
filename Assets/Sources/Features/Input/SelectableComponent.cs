@@ -1,4 +1,6 @@
 ﻿using Entitas;
 
-public class SelectableComponent : IComponent {
+[Core]
+public class SelectableComponent : IComponent
+{
 }

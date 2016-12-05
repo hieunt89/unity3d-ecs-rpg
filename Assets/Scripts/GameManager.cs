@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void OnDestroy () {
-		_systems.TearDown ();
+//		_systems.TearDown ();
 	}
 	Systems CreateSystems (Pools pools) {
 		return new Feature ("Systems")
@@ -35,10 +35,12 @@ public class GameManager : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new CameraSystem()))
 
 			// Input
-			.Add (pools.input.CreateSystem (new SelectInputSystem()))
-			.Add (pools.input.CreateSystem (new NotifySelectListenerSystem()))
-			.Add (pools.input.CreateSystem (new MoveInputSystem()))
-			.Add (pools.input.CreateSystem (new ProcessMoveInputSystem()))
+			.Add (pools.core.CreateSystem (new ClickInputSystem()))
+			.Add (pools.core.CreateSystem (new DragInputSystem()))
+
+//			.Add (pools.core.CreateSystem (new NotifySelectListenerSystem()))
+//			.Add (pools.input.CreateSystem (new MoveInputSystem()))
+//			.Add (pools.input.CreateSystem (new ProcessMoveInputSystem()))
 
 			// Character
 			.Add (pools.core.CreateSystem (new CharacterInitializeSystem()))
@@ -62,8 +64,8 @@ public class GameManager : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new ExpUpdateSystem()))		
 
 			// Skill
-			.Add (pools.core.CreateSystem (new BleedSystem()))
-			.Add (pools.core.CreateSystem (new SlowMovementSystem()))
+//			.Add (pools.core.CreateSystem (new BleedSystem()))
+//			.Add (pools.core.CreateSystem (new SlowMovementSystem()))
 
 			;
 

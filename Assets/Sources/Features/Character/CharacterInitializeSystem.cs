@@ -12,7 +12,7 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 	{
 		_pool.CreateEntity ()
 			.IsActive (true)
-			.IsCharacter(true)
+			.IsCharacter (true)
 			.AddName ("footman")
 			.AddCurrentLevel (1)
 			.AddCurrentExp (50)
@@ -23,6 +23,7 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddMoveSpeed (10f)
 			.AddTurnSpeed (500f)	
 			.IsSelectable (true)
+			.IsSelected (true)
 			;
 		;
 

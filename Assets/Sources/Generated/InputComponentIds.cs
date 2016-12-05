@@ -8,21 +8,11 @@
 //------------------------------------------------------------------------------
 public static class InputComponentIds {
 
-    public const int MoveInput = 0;
-    public const int SelectInput = 1;
-    public const int SelectListener = 2;
-
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "MoveInput",
-        "SelectInput",
-        "SelectListener"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(MoveInputComponent),
-        typeof(SelectInputComponent),
-        typeof(SelectListenerComponent)
     };
 }

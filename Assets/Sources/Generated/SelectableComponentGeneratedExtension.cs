@@ -6,6 +6,8 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Entitas;
+
 namespace Entitas {
 
     public partial class Entity {
@@ -13,13 +15,13 @@ namespace Entitas {
         static readonly SelectableComponent selectableComponent = new SelectableComponent();
 
         public bool isSelectable {
-            get { return HasComponent(ComponentIds.Selectable); }
+            get { return HasComponent(CoreComponentIds.Selectable); }
             set {
                 if(value != isSelectable) {
                     if(value) {
-                        AddComponent(ComponentIds.Selectable, selectableComponent);
+                        AddComponent(CoreComponentIds.Selectable, selectableComponent);
                     } else {
-                        RemoveComponent(ComponentIds.Selectable);
+                        RemoveComponent(CoreComponentIds.Selectable);
                     }
                 }
             }
@@ -30,16 +32,17 @@ namespace Entitas {
             return this;
         }
     }
+}
 
-    public partial class Matcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherSelectable;
 
         public static IMatcher Selectable {
             get {
                 if(_matcherSelectable == null) {
-                    var matcher = (Matcher)Matcher.AllOf(ComponentIds.Selectable);
-                    matcher.componentNames = ComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.Selectable);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherSelectable = matcher;
                 }
 
@@ -47,4 +50,3 @@ namespace Entitas {
             }
         }
     }
-}
