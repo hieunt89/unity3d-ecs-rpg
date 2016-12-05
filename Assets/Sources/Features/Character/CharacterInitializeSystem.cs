@@ -13,7 +13,7 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 		_pool.CreateEntity ()
 			.IsActive (true)
 			.IsCharacter(true)
-			.AddName ("fdj")
+			.AddName ("footman")
 			.AddCurrentLevel (1)
 			.AddCurrentExp (50)
 			.AddBaseHitPoint (100)
@@ -21,14 +21,15 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddPosition (5f, 0f, 5f)
 			.AddDestination (5f, 0f, 5f)
 			.AddMoveSpeed (10f)
-			.AddTurnSpeed (500f)		
+			.AddTurnSpeed (500f)	
+			.IsSelectable (true)
 			;
 		;
 
 		_pool.CreateEntity ()
 			.IsActive (true)
 			.IsCharacter(true)
-			.AddName ("findujanvier")
+			.AddName ("troll")
 			.AddCurrentLevel (2)
 			.AddCurrentExp (500)
 			.AddBaseHitPoint (200)

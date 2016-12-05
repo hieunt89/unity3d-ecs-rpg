@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour {
 			.Add (pools.core.CreateSystem (new PauseUpdateSystem()))
 			.Add (pools.core.CreateSystem (new TimeScaleUpdateSystem()))
 			
+			// Camera
+			.Add (pools.core.CreateSystem (new CameraSystem()))
+
 			// Input
 			.Add (pools.input.CreateSystem (new SelectInputSystem()))
 			.Add (pools.input.CreateSystem (new NotifySelectListenerSystem()))

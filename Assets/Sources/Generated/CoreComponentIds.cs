@@ -17,28 +17,31 @@ public static class CoreComponentIds {
     public const int CurrentExp = 6;
     public const int CurrentHitPoint = 7;
     public const int CurrentLevel = 8;
-    public const int Destination = 9;
-    public const int Exp = 10;
-    public const int HitPoint = 11;
-    public const int HitPointRegen = 12;
-    public const int LevelUp = 13;
-    public const int ManaPoint = 14;
-    public const int Movable = 15;
-    public const int MoveSpeed = 16;
-    public const int Name = 17;
-    public const int Pause = 18;
-    public const int PauseListener = 19;
-    public const int Position = 20;
-    public const int SlowMovement = 21;
-    public const int Tick = 22;
-    public const int TickListener = 23;
-    public const int TimeScale = 24;
-    public const int TotalTick = 25;
-    public const int TurnSpeed = 26;
-    public const int View = 27;
-    public const int Wound = 28;
+    public const int Description = 9;
+    public const int Destination = 10;
+    public const int Exp = 11;
+    public const int HitPoint = 12;
+    public const int HitPointRegen = 13;
+    public const int IconCompoent = 14;
+    public const int LevelUp = 15;
+    public const int ManaPoint = 16;
+    public const int Movable = 17;
+    public const int MoveSpeed = 18;
+    public const int Name = 19;
+    public const int Pause = 20;
+    public const int PauseListener = 21;
+    public const int Position = 22;
+    public const int Selected = 23;
+    public const int SlowMovement = 24;
+    public const int Tick = 25;
+    public const int TickListener = 26;
+    public const int TimeScale = 27;
+    public const int TotalTick = 28;
+    public const int TurnSpeed = 29;
+    public const int View = 30;
+    public const int Wound = 31;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "Active",
@@ -50,10 +53,12 @@ public static class CoreComponentIds {
         "CurrentExp",
         "CurrentHitPoint",
         "CurrentLevel",
+        "Description",
         "Destination",
         "Exp",
         "HitPoint",
         "HitPointRegen",
+        "IconCompoent",
         "LevelUp",
         "ManaPoint",
         "Movable",
@@ -62,6 +67,7 @@ public static class CoreComponentIds {
         "Pause",
         "PauseListener",
         "Position",
+        "Selected",
         "SlowMovement",
         "Tick",
         "TickListener",
@@ -82,10 +88,12 @@ public static class CoreComponentIds {
         typeof(CurrentExpComponent),
         typeof(CurrentHitPointComponent),
         typeof(CurrentLevelComponent),
+        typeof(DescriptionComponent),
         typeof(DestinationComponent),
         typeof(ExpComponent),
         typeof(HitPointComponent),
         typeof(HitPointRegenComponent),
+        typeof(IconCompoent),
         typeof(LevelUpComponent),
         typeof(ManaPointComponent),
         typeof(MovableComponent),
@@ -94,6 +102,7 @@ public static class CoreComponentIds {
         typeof(PauseComponent),
         typeof(PauseListenerComponent),
         typeof(PositionComponent),
+        typeof(SelectedComponent),
         typeof(SlowMovementComponent),
         typeof(TickComponent),
         typeof(TickListenerComponent),

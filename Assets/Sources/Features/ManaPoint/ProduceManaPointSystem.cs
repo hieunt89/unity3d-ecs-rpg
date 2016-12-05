@@ -4,10 +4,10 @@ using Entitas;
 
 public class ProduceManaPointSystem : ISetPool, IInitializeSystem, IReactiveExecuteSystem
 {
-	Pool _pool;
+//	Pool _pool;
     public void SetPool(Pool pool)
     {
-        _pool = pool;
+//        _pool = pool;
     }
     public void Initialize()
     {
