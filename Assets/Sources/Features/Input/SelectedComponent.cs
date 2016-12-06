@@ -1,6 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-[Core]
-public class SelectedComponent : IComponent {
+[Input]
+public class SelectedComponent : IComponent
+{
 }

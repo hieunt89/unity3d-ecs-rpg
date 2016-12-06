@@ -8,11 +8,18 @@
 //------------------------------------------------------------------------------
 public static class InputComponentIds {
 
-    public const int TotalComponents = 0;
+    public const int Selectable = 0;
+    public const int Selected = 1;
+
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
+        "Selectable",
+        "Selected"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(SelectableComponent),
+        typeof(SelectedComponent)
     };
 }
