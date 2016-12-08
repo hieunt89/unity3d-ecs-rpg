@@ -10,7 +10,7 @@ public class CameraSystem : IInitializeSystem, IExecuteSystem
 //	const float MAX_CAM_DISTANCE = 40f;
 
 	public float movementSpeed = .5f;
-	public float rotationSpeed = 4f;
+	public float rotationSpeed = 2f;
 	public float smoothess = 0.85f;
 
 	// how fast the camera zooms in and out

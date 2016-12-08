@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public class SelectObjectSystem : MonoBehaviour
+public class _SelectObjectSystem : MonoBehaviour
 {
 	bool isSelecting = false;
 	Vector3 startMousePosition;

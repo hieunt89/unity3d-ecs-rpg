@@ -23,7 +23,6 @@ public class CharacterInitializeSystem : ISetPool, IInitializeSystem {
 			.AddMoveSpeed (10f)
 			.AddTurnSpeed (500f)	
 			.IsSelectable (true)
-			.IsSelected (true)
 			;
 		;
 

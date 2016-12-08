@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Input]
+[Core]
 public class SelectableComponent : IComponent
 {
 }

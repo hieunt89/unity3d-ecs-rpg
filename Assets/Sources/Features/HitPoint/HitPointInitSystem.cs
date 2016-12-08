@@ -12,10 +12,9 @@ public class HitPointInitializeSystem : IReactiveSystem
 
 	public void Execute (List<Entity> entities)
 	{
-		Debug.Log ("HitPointInitializeSystem");
 		foreach (var e in entities) {
-//			e.AddHitPoint (e.baseHitPoint.amount);
-//			e.AddCurrentHitPoint (e.baseHitPoint.amount);
+			e.AddHitPoint (e.baseHitPoint.amount);
+			e.AddCurrentHitPoint (e.baseHitPoint.amount);
 		}
 	}
 }

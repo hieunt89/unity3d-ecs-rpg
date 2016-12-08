@@ -1,7 +1,8 @@
 ﻿using Entitas;
 using UnityEngine;
 
-[Input]
+[Core]
 public class SelectedComponent : IComponent
 {
+	
 }

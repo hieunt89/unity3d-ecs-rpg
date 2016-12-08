@@ -15,13 +15,13 @@ namespace Entitas {
         static readonly SelectedComponent selectedComponent = new SelectedComponent();
 
         public bool isSelected {
-            get { return HasComponent(InputComponentIds.Selected); }
+            get { return HasComponent(CoreComponentIds.Selected); }
             set {
                 if(value != isSelected) {
                     if(value) {
-                        AddComponent(InputComponentIds.Selected, selectedComponent);
+                        AddComponent(CoreComponentIds.Selected, selectedComponent);
                     } else {
-                        RemoveComponent(InputComponentIds.Selected);
+                        RemoveComponent(CoreComponentIds.Selected);
                     }
                 }
             }
@@ -34,15 +34,15 @@ namespace Entitas {
     }
 }
 
-    public partial class InputMatcher {
+    public partial class CoreMatcher {
 
         static IMatcher _matcherSelected;
 
         public static IMatcher Selected {
             get {
                 if(_matcherSelected == null) {
-                    var matcher = (Matcher)Matcher.AllOf(InputComponentIds.Selected);
-                    matcher.componentNames = InputComponentIds.componentNames;
+                    var matcher = (Matcher)Matcher.AllOf(CoreComponentIds.Selected);
+                    matcher.componentNames = CoreComponentIds.componentNames;
                     _matcherSelected = matcher;
                 }
 

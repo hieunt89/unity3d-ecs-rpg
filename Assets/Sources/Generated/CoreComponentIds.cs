@@ -23,25 +23,28 @@ public static class CoreComponentIds {
     public const int HitPoint = 12;
     public const int HitPointRegen = 13;
     public const int IconCompoent = 14;
-    public const int LevelUp = 15;
-    public const int ManaPoint = 16;
-    public const int Movable = 17;
-    public const int MoveSpeed = 18;
-    public const int Name = 19;
-    public const int Pause = 20;
-    public const int PauseListener = 21;
-    public const int Position = 22;
-    public const int SelectionListener = 23;
-    public const int SlowMovement = 24;
-    public const int Tick = 25;
-    public const int TickListener = 26;
-    public const int TimeScale = 27;
-    public const int TotalTick = 28;
-    public const int TurnSpeed = 29;
-    public const int View = 30;
-    public const int Wound = 31;
+    public const int Indicator = 15;
+    public const int LevelUp = 16;
+    public const int ManaPoint = 17;
+    public const int Movable = 18;
+    public const int MoveSpeed = 19;
+    public const int Name = 20;
+    public const int Pause = 21;
+    public const int PauseListener = 22;
+    public const int Position = 23;
+    public const int Selectable = 24;
+    public const int Selected = 25;
+    public const int SelectionListener = 26;
+    public const int SlowMovement = 27;
+    public const int Tick = 28;
+    public const int TickListener = 29;
+    public const int TimeScale = 30;
+    public const int TotalTick = 31;
+    public const int TurnSpeed = 32;
+    public const int View = 33;
+    public const int Wound = 34;
 
-    public const int TotalComponents = 32;
+    public const int TotalComponents = 35;
 
     public static readonly string[] componentNames = {
         "Active",
@@ -59,6 +62,7 @@ public static class CoreComponentIds {
         "HitPoint",
         "HitPointRegen",
         "IconCompoent",
+        "Indicator",
         "LevelUp",
         "ManaPoint",
         "Movable",
@@ -67,6 +71,8 @@ public static class CoreComponentIds {
         "Pause",
         "PauseListener",
         "Position",
+        "Selectable",
+        "Selected",
         "SelectionListener",
         "SlowMovement",
         "Tick",
@@ -94,6 +100,7 @@ public static class CoreComponentIds {
         typeof(HitPointComponent),
         typeof(HitPointRegenComponent),
         typeof(IconCompoent),
+        typeof(IndicatedComponent),
         typeof(LevelUpComponent),
         typeof(ManaPointComponent),
         typeof(MovableComponent),
@@ -102,6 +109,8 @@ public static class CoreComponentIds {
         typeof(PauseComponent),
         typeof(PauseListenerComponent),
         typeof(PositionComponent),
+        typeof(SelectableComponent),
+        typeof(SelectedComponent),
         typeof(SelectionListenerComponent),
         typeof(SlowMovementComponent),
         typeof(TickComponent),

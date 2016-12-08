@@ -19,4 +19,11 @@
 	public enum Game {
 
 	}
+
+	public enum Input {
+		LeftMouseClick,
+		RightMouseClick,
+		MiddleMouseClick,
+
+	}
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ 	using UnityEngine;
 using Entitas;
 
 public class GameManager : MonoBehaviour
@@ -41,10 +41,13 @@ public class GameManager : MonoBehaviour
 			.Add (pools.core.CreateSystem (new CameraSystem ()))
 
 		// Input
-			.Add (pools.input.CreateSystem (new ClickInputSystem ()))
+			.Add (pools.input.CreateSystem (new MouseInputSystem ()))
 			.Add (pools.input.CreateSystem (new DragInputSystem ()))
+			
+			.Add (pools.core.CreateSystem (new SelectObjectSystem ()))
+			.Add (pools.core.CreateSystem (new IndicateObjectSystem ()))
 
-//			.Add (pools.core.CreateSystem (new NotifySelectListenerSystem()))
+//			.Add (pools.core.CreateSystem (new ()))
 //			.Add (pools.input.CreateSystem (new MoveInputSystem()))
 //			.Add (pools.input.CreateSystem (new ProcessMoveInputSystem()))
 
