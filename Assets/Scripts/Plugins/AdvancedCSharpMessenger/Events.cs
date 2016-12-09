@@ -24,6 +24,7 @@
 		LeftMouseClick,
 		RightMouseClick,
 		MiddleMouseClick,
+		MouseDrag
 
 	}
 }

@@ -10,6 +10,7 @@ public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 	RaycastHit hit;
 	int groundMask;
 
+
 	public void Initialize ()
 	{
 		playerInput = GameObject.FindObjectOfType <PlayerInput> ();
@@ -22,12 +23,25 @@ public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 
 	public void Execute ()
 	{
-		var leftClick = mInput.leftClick.wasJustPressed;
-		if (leftClick) {
+		var leftMouseDown = mInput.leftClick.wasJustPressed;
+		if (leftMouseDown) {
+
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Mouse.current.position), out hit, Mathf.Infinity)) {
 				Messenger.Broadcast <RaycastHit> (Events.Input.LeftMouseClick, hit);
 			}
 		}
+
+		var leftMouseHeld = mInput.leftClick.isHeld;
+		if (leftMouseHeld) {
+
+		}
+
+		var leftMouseUp = mInput.leftClick.wasJustReleased;
+		if (leftMouseUp) {
+
+		}
+
+
 
 		var middleClick = mInput.middleClick.wasJustPressed;
 		if (middleClick) {
@@ -42,4 +56,5 @@ public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 			}
 		}
 	}
+
 }
